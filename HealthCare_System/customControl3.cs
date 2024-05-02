@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -46,9 +47,8 @@ namespace HealthCare_System
             customerFrm.DataGridViewControl.Rows.Clear();
             customerFrm.LoadData();
 
-            templateFilePath = System.Windows.Forms.Application.StartupPath + @"\reportTemplate\Customer Report.xlsx";
-/*            reportFilePath = System.Windows.Forms.Application.StartupPath + @"\generatedReport\Customer Report " + dateGenerated + ".xlsx";
-*/
+
+            templateFilePath = Path.Combine(Directory.GetParent(System.Windows.Forms.Application.StartupPath).FullName, "reportTemplate", "Customer Report.xlsx");
             // Store the current DataGridView
             currentDataGridView = customerFrm.DataGridViewControl;
         }
@@ -64,8 +64,8 @@ namespace HealthCare_System
             inventoryFrm.DataGridViewControl.Rows.Clear();
             inventoryFrm.LoadData();
 
-            templateFilePath = System.Windows.Forms.Application.StartupPath + @"\reportTemplate\Inventory Report.xlsx";
-            
+            templateFilePath = Path.Combine(Directory.GetParent(System.Windows.Forms.Application.StartupPath).FullName, "reportTemplate", "Inventory Report.xlsx");
+
 
             Console.WriteLine(reportFilePath);
             currentDataGridView = inventoryFrm.DataGridViewControl;
@@ -83,7 +83,7 @@ namespace HealthCare_System
             salesFrm.LoadData();
 
 
-            templateFilePath = System.Windows.Forms.Application.StartupPath + @"\reportTemplate\Sales Report.xlsx";
+            templateFilePath = Path.Combine(Directory.GetParent(System.Windows.Forms.Application.StartupPath).FullName, "reportTemplate", "Sales Report.xlsx");
 
             // Store the current DataGridView
             currentDataGridView = salesFrm.DataGridViewControl;
@@ -127,15 +127,15 @@ namespace HealthCare_System
                 // Assign different report file paths based on which button was clicked
                 if (templateFilePath.Contains("Customer Report"))
                 {
-                    reportFilePath = System.Windows.Forms.Application.StartupPath + @"\generatedReport\Customer Report " + dateGenerated + ".xlsx";
+                    reportFilePath = Path.Combine(Directory.GetParent(System.Windows.Forms.Application.StartupPath).FullName, "generatedReport", "Customer Report " + dateGenerated + ".xlsx");
                 }
                 else if (templateFilePath.Contains("Inventory Report"))
                 {
-                    reportFilePath = System.Windows.Forms.Application.StartupPath + @"\generatedReport\Inventory Report " + dateGenerated + ".xlsx";
+                    reportFilePath = Path.Combine(Directory.GetParent(System.Windows.Forms.Application.StartupPath).FullName, "generatedReport", "Inventory Report " + dateGenerated + ".xlsx");
                 }
                 else if (templateFilePath.Contains("Sales Report"))
                 {
-                    reportFilePath = System.Windows.Forms.Application.StartupPath + @"\generatedReport\Sales Report " + dateGenerated + ".xlsx";
+                    reportFilePath = Path.Combine(Directory.GetParent(System.Windows.Forms.Application.StartupPath).FullName, "generatedReport", "Sales Report " + dateGenerated + ".xlsx");
                 }
 
                 // Loop through DataGridView rows and populate Excel cells
