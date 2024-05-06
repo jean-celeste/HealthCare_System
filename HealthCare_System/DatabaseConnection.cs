@@ -8,7 +8,7 @@ namespace HealthCare_System
         private static MySqlConnection conn;
 
         // Connection String
-        private static string connectionString = "SERVER = localhost; DATABASE = books_db; UID = root; PASSWORD = 1234;";
+        private static string connectionString = "SERVER = localhost; DATABASE = healthcare_db; UID = root; PASSWORD = 1234;";
 
         static DatabaseConnection()
         {
