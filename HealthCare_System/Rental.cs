@@ -61,16 +61,8 @@ namespace HealthCare_System
             DataTable dataTable = new DataTable();
 
             string query = @"
-                SELECT c.customer_id, c.customer_name, c.email, c.phone, c.address,
-                       b.title AS borrowed_book_title,
-                       DATE_FORMAT(c.date_borrowed, '%Y-%m-%d %H:%i:%s') AS formatted_date_borrowed,
-                       c.paid, c.returned
-                FROM books_db.customers AS c
-                JOIN books_db.books AS b ON c.borrowed_books = b.book_id
-                ORDER BY c.customer_id";
-
-
-
+                    SELECT p.patient_id, p.patient_name, p.age, p.gender, p.address, p.phone, p.email
+                    FROM healthcare_db.patient AS p";
 
             MySqlCommand command = new MySqlCommand(query, conn);
 
@@ -88,15 +80,14 @@ namespace HealthCare_System
             foreach (DataRow row in dataTable.Rows)
             {
                 dataGridView1.Rows.Add(
-                    row["customer_id"].ToString(),
-                    row["customer_name"].ToString(),
-                    row["email"].ToString(),
-                    row["phone"].ToString(),
+                    row["patient_id"].ToString(),
+                    row["patient_name"].ToString(),
+                    row["age"].ToString(),
+                    row["gender"].ToString(),
                     row["address"].ToString(),
-                    row["borrowed_book_title"].ToString(),
-                    row["formatted_date_borrowed"].ToString(),
-                    row["paid"].ToString(),
-                    row["returned"].ToString()
+                    row["phone"].ToString(),
+                    row["email"].ToString()
+                   
                 );
             }
 
@@ -124,7 +115,7 @@ namespace HealthCare_System
 
         private void saveBtn_Click(object sender, EventArgs e)
         {
-            
+            /*
                 if (string.IsNullOrEmpty(cust_name.Text) || string.IsNullOrEmpty(cust_email.Text) || string.IsNullOrEmpty(cust_phone.Text) ||
                     string.IsNullOrEmpty(cust_address.Text) || string.IsNullOrEmpty(book.Text) || string.IsNullOrEmpty(date.Text))
                 {
@@ -177,6 +168,7 @@ namespace HealthCare_System
                     }
                 }
             
+            */
         }
         private void dataGridView1_SelectionChanged(object sender, EventArgs e)
         {
@@ -197,7 +189,7 @@ namespace HealthCare_System
                 cust_address.Text = selectedRow.Cells["Column4"].Value.ToString();
                 //book.Text = selectedRow.Cells["Column6"].Value.ToString();
 
-                // Fetch the date from column 7 (index-based, so 6 for column 7)
+                /*// Fetch the date from column 7 (index-based, so 6 for column 7)
                 string dateString = selectedRow.Cells[6].Value.ToString(); // Assuming column index 6 for column 7
 
                 // Parse the string to obtain a DateTime object
@@ -261,7 +253,7 @@ namespace HealthCare_System
                 {
                     conn.Close(); // Close the connection after using it
                 }
-
+*/
 
             }
             else
@@ -332,7 +324,7 @@ namespace HealthCare_System
 
         private void cancelBtn_Click(object sender, EventArgs e)
         {
-            string customer_id = dataGridView1.CurrentRow.Cells["Column0"].Value.ToString();
+/*            string customer_id = dataGridView1.CurrentRow.Cells["Column0"].Value.ToString();
             try
             {
                 if (conn.State != ConnectionState.Open)
@@ -368,12 +360,12 @@ namespace HealthCare_System
                 LoadData(); // Reload data after the operation
                 conn.Close(); // Close the connection
                 clear(); // Clear the form fields
-            }
+            }*/
         }
 
         private void cust_search_TextChanged(object sender, EventArgs e)
         {
-            // Clear the DataGridView before adding new rows
+            /*// Clear the DataGridView before adding new rows
             dataGridView1.Rows.Clear();
 
             // Check if the connection is not open, then open it
@@ -424,7 +416,7 @@ namespace HealthCare_System
             clear();
 
             // Close the connection
-            conn.Close();
+            conn.Close()*/;
         }
 
 
