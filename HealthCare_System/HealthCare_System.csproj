@@ -135,6 +135,12 @@
       <DependentUpon>customTextBox.cs</DependentUpon>
     </Compile>
     <Compile Include="DatabaseConnection.cs" />
+    <Compile Include="health_info.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="health_info.Designer.cs">
+      <DependentUpon>health_info.cs</DependentUpon>
+    </Compile>
     <Compile Include="Inventory.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -197,6 +203,9 @@
     <EmbeddedResource Include="customTextBox.resx">
       <DependentUpon>customTextBox.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="health_info.resx">
+      <DependentUpon>health_info.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Inventory.resx">
       <DependentUpon>Inventory.cs</DependentUpon>
     </EmbeddedResource>
@@ -228,7 +237,6 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -270,6 +278,11 @@
       <Isolated>False</Isolated>
       <EmbedInteropTypes>True</EmbedInteropTypes>
     </COMReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="calendar.png" />
+    <Content Include="hospital-bed - Copy.png" />
+    <Content Include="medical - Copy.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
