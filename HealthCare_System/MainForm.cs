@@ -65,17 +65,17 @@ namespace HealthCare_System
 
         private void button6_Click(object sender, EventArgs e)
         {
-            button6.BackColor = Color.White;
+            //button6.BackColor = Color.White;
             button2.BackColor = Color.DarkSlateGray;
             button1.BackColor = Color.DarkSlateGray;
-            button5.BackColor = Color.DarkSlateGray;
+            //button5.BackColor = Color.DarkSlateGray;
             button8.BackColor = Color.DarkSlateGray;
 
             button8.ForeColor = Color.White;
 
-            button6.ForeColor = Color.DarkSlateGray;
+            //button6.ForeColor = Color.DarkSlateGray;
             button2.ForeColor = Color.White;
-            button5.ForeColor = Color.White;
+            //button5.ForeColor = Color.White;
             button1.ForeColor = Color.White;
 
             report = new customControl3();
@@ -96,18 +96,18 @@ namespace HealthCare_System
 
         private void button5_Click(object sender, EventArgs e)
         {
-            button5.BackColor = Color.White;
+            //button5.BackColor = Color.White;
             button2.BackColor = Color.DarkSlateGray;
-            button6.BackColor = Color.DarkSlateGray;
+            //button6.BackColor = Color.DarkSlateGray;
             button1.BackColor = Color.DarkSlateGray;
             button8.BackColor = Color.DarkSlateGray;
 
             button8.ForeColor = Color.White;
 
-            button5.ForeColor = Color.DarkSlateGray;
+            //button5.ForeColor = Color.DarkSlateGray;
             button2.ForeColor = Color.White;
             button1.ForeColor = Color.White;
-            button6.ForeColor = Color.White;
+            //button6.ForeColor = Color.White;
 
             about = new customControl4();
             Controls.Add(about);
@@ -138,16 +138,16 @@ namespace HealthCare_System
         {
             button1.BackColor = Color.White;
             button2.BackColor = Color.DarkSlateGray;
-            button5.BackColor = Color.DarkSlateGray;
-            button6.BackColor = Color.DarkSlateGray;
+            //button5.BackColor = Color.DarkSlateGray;
+            //button6.BackColor = Color.DarkSlateGray;
             button8.BackColor = Color.DarkSlateGray;
 
             button8.ForeColor = Color.White;
 
             button1.ForeColor = Color.DarkSlateGray;
             button2.ForeColor = Color.White;
-            button5.ForeColor = Color.White;
-            button6.ForeColor = Color.White;
+            //button5.ForeColor = Color.White;
+            //button6.ForeColor = Color.White;
 
             home = new customControl1();
             Controls.Add(home);
@@ -183,15 +183,15 @@ namespace HealthCare_System
         {
             button2.BackColor = Color.White;
             button1.BackColor = Color.DarkSlateGray;
-            button5.BackColor = Color.DarkSlateGray;
-            button6.BackColor = Color.DarkSlateGray;
+            //button5.BackColor = Color.DarkSlateGray;
+            //button6.BackColor = Color.DarkSlateGray;
             button8.BackColor = Color.DarkSlateGray;
 
             button8.ForeColor = Color.White;
             button2.ForeColor = Color.DarkSlateGray;
             button1.ForeColor = Color.White;
-            button5.ForeColor = Color.White;
-            button6.ForeColor = Color.White;
+            //button5.ForeColor = Color.White;
+            //button6.ForeColor = Color.White;
 
             dashboard = new customControl2();
             Controls.Add(dashboard);
@@ -217,16 +217,16 @@ namespace HealthCare_System
             button8.BackColor = Color.White;
             button1.BackColor = Color.DarkSlateGray;
             button2.BackColor = Color.DarkSlateGray;
-            button5.BackColor = Color.DarkSlateGray;
-            button6.BackColor = Color.DarkSlateGray;
+            //button5.BackColor = Color.DarkSlateGray;
+            //button6.BackColor = Color.DarkSlateGray;
 
             button8.ForeColor = Color.DarkSlateGray;
             button1.ForeColor = Color.White;
             button2.ForeColor = Color.White;
-            button5.ForeColor = Color.White;
-            button6.ForeColor = Color.White;
+            //button5.ForeColor = Color.White;
+            //button6.ForeColor = Color.White;
 
-            Rental rentalfrm= new Rental();
+            Patient rentalfrm= new Patient();
             Controls.Add(rentalfrm);
             rentalfrm.Location = new Point(221, 40);
             rentalfrm.BringToFront();

@@ -56,7 +56,7 @@ namespace HealthCare_System
 
         private void button2_Click(object sender, EventArgs e)
         {
-            MySqlConnection conn = DatabaseConnection.GetConnection(); // Obtain the connection object
+            /*MySqlConnection conn = DatabaseConnection.GetConnection(); // Obtain the connection object
 
             try
             {
@@ -104,10 +104,10 @@ namespace HealthCare_System
             finally
             {
                 conn.Close(); // Close the connection
-            }
-            /*MainForm main = new MainForm(this);
+            }*/
+            MainForm main = new MainForm(this);
             main.Show();
-            this.Hide();*/
+            this.Hide();
 
 
 

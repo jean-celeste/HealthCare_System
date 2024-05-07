@@ -15,10 +15,11 @@ using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
 
 namespace HealthCare_System
 {
-    public partial class Rental : UserControl
+    public partial class Patient : UserControl
     {
         private MySqlConnection conn;
-        public Rental()
+        private health_info healthInfoFrm;
+        public Patient()
         {
             InitializeComponent();
             conn = DatabaseConnection.GetConnection();
@@ -105,12 +106,8 @@ namespace HealthCare_System
             cust_email.Clear();
             cust_phone.Clear();
             cust_address.Clear();
-            book.Clear();
-            date.Value = DateTime.Now;
-            radioButton1.Checked = false;
-            radioButton2.Checked = false;
-            radioButton6.Checked = false;
-            radioButton5.Checked = false;
+            patientPhone.Clear();
+            patientEmail.Clear();
         }
 
         private void saveBtn_Click(object sender, EventArgs e)
@@ -187,35 +184,11 @@ namespace HealthCare_System
                 cust_email.Text = selectedRow.Cells["Column2"].Value.ToString();
                 cust_phone.Text = selectedRow.Cells["Column3"].Value.ToString();
                 cust_address.Text = selectedRow.Cells["Column4"].Value.ToString();
+                patientPhone.Text = selectedRow.Cells["Column5"].Value.ToString();
+                patientEmail.Text = selectedRow.Cells["Column5"].Value.ToString();
                 //book.Text = selectedRow.Cells["Column6"].Value.ToString();
 
-                /*// Fetch the date from column 7 (index-based, so 6 for column 7)
-                string dateString = selectedRow.Cells[6].Value.ToString(); // Assuming column index 6 for column 7
-
-                // Parse the string to obtain a DateTime object
-                DateTime selectedDate;
-                if (DateTime.TryParse(dateString, out selectedDate))
-                {
-                    // Set the value of your DateTimePicker control to the retrieved date
-                    date.Text = selectedDate.ToString("yyyy-MM-dd HH:mm:ss");
-                }
-                else
-                {
-                    // Handle invalid date format
-                    MessageBox.Show("Invalid date format in column 7.");
-                }
-
-                // Check the paid radio button based on the value in the DataGridView
-                string paidValue = selectedRow.Cells["Column7"].Value.ToString();
-                radioButton1.Checked = paidValue.Equals("Yes", StringComparison.OrdinalIgnoreCase);
-                radioButton2.Checked = paidValue.Equals("No", StringComparison.OrdinalIgnoreCase);
-
-                // Check the returned radio button based on the value in the DataGridView
-                string returnedValue = selectedRow.Cells["Column8"].Value.ToString();
-                radioButton6.Checked = returnedValue.Equals("Yes", StringComparison.OrdinalIgnoreCase);
-                radioButton5.Checked = returnedValue.Equals("No", StringComparison.OrdinalIgnoreCase);
-
-
+                /*
 
                 string customer_id = selectedRow.Cells["Column0"].Value.ToString();
 
@@ -294,10 +267,10 @@ namespace HealthCare_System
                 command.Parameters.AddWithValue("@email", cust_email.Text);
                 command.Parameters.AddWithValue("@phone", cust_phone.Text);
                 command.Parameters.AddWithValue("@address", cust_address.Text);
-                command.Parameters.AddWithValue("@borrowed_book", book.Text);
+                /*command.Parameters.AddWithValue("@borrowed_book", book.Text);
                 command.Parameters.AddWithValue("@date_borrowed", date.Value.ToString("yyyy-MM-dd HH:mm:ss")); ;
                 command.Parameters.AddWithValue("@paid", radioButton1.Checked ? "Yes" : "No");
-                command.Parameters.AddWithValue("@returned", radioButton6.Checked ? "Yes" : "No");
+                command.Parameters.AddWithValue("@returned", radioButton6.Checked ? "Yes" : "No");*/
 
                 int rowsAffected = command.ExecuteNonQuery();
 
@@ -432,6 +405,29 @@ namespace HealthCare_System
         }
 
         private void book_MaskInputRejected(object sender, MaskInputRejectedEventArgs e)
+        {
+
+        }
+
+        private void label6_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            string patient_id = dataGridView1.CurrentRow.Cells["Column0"].Value.ToString();
+
+            healthInfoFrm = new health_info();
+            healthInfoFrm.LoadData(patient_id);
+            Controls.Add(healthInfoFrm);
+            healthInfoFrm.Location = new Point(0, 0);
+            healthInfoFrm.BringToFront();
+
+            
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
         {
 
         }

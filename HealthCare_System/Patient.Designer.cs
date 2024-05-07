@@ -1,6 +1,6 @@
 ﻿namespace HealthCare_System
 {
-    partial class Rental
+    partial class Patient
     {
         /// <summary> 
         /// Required designer variable.
@@ -28,8 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
             this.label1 = new System.Windows.Forms.Label();
             this.cust_name = new System.Windows.Forms.TextBox();
             this.cust_email = new System.Windows.Forms.MaskedTextBox();
@@ -40,8 +40,6 @@
             this.label5 = new System.Windows.Forms.Label();
             this.cust_address = new System.Windows.Forms.MaskedTextBox();
             this.label6 = new System.Windows.Forms.Label();
-            this.date = new System.Windows.Forms.DateTimePicker();
-            this.book = new System.Windows.Forms.MaskedTextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.saveBtn = new System.Windows.Forms.Button();
             this.updateBtn = new System.Windows.Forms.Button();
@@ -49,15 +47,6 @@
             this.cust_search = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.label10 = new System.Windows.Forms.Label();
-            this.radioButton5 = new System.Windows.Forms.RadioButton();
-            this.radioButton6 = new System.Windows.Forms.RadioButton();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.label9 = new System.Windows.Forms.Label();
-            this.radioButton2 = new System.Windows.Forms.RadioButton();
-            this.radioButton1 = new System.Windows.Forms.RadioButton();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.label11 = new System.Windows.Forms.Label();
             this.Column0 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -65,32 +54,35 @@
             this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.label11 = new System.Windows.Forms.Label();
+            this.patientPhone = new System.Windows.Forms.MaskedTextBox();
+            this.patientEmail = new System.Windows.Forms.MaskedTextBox();
+            this.viewBtn = new System.Windows.Forms.Button();
+            this.panel1 = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            this.panel1.SuspendLayout();
-            this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // label1
             // 
             this.label1.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(13, -12);
+            this.label1.Location = new System.Drawing.Point(15, -1);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(123, 43);
             this.label1.TabIndex = 1;
-            this.label1.Text = "Rental";
+            this.label1.Text = "Patient Info";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // cust_name
             // 
-            this.cust_name.Location = new System.Drawing.Point(31, 77);
+            this.cust_name.Location = new System.Drawing.Point(31, 120);
             this.cust_name.Name = "cust_name";
             this.cust_name.Size = new System.Drawing.Size(217, 20);
             this.cust_name.TabIndex = 2;
             // 
             // cust_email
             // 
-            this.cust_email.Location = new System.Drawing.Point(31, 134);
+            this.cust_email.Location = new System.Drawing.Point(31, 177);
             this.cust_email.Name = "cust_email";
             this.cust_email.Size = new System.Drawing.Size(217, 20);
             this.cust_email.TabIndex = 3;
@@ -99,18 +91,18 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Montserrat", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(28, 56);
+            this.label3.Location = new System.Drawing.Point(28, 99);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(119, 18);
+            this.label3.Size = new System.Drawing.Size(102, 18);
             this.label3.TabIndex = 5;
-            this.label3.Text = "Customer Name:";
+            this.label3.Text = "Patient Name:";
             this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Montserrat", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(28, 113);
+            this.label2.Location = new System.Drawing.Point(28, 156);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(48, 18);
             this.label2.TabIndex = 6;
@@ -120,7 +112,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Montserrat", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(28, 169);
+            this.label4.Location = new System.Drawing.Point(28, 212);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(54, 18);
             this.label4.TabIndex = 8;
@@ -129,7 +121,7 @@
             // 
             // cust_phone
             // 
-            this.cust_phone.Location = new System.Drawing.Point(31, 190);
+            this.cust_phone.Location = new System.Drawing.Point(31, 233);
             this.cust_phone.Name = "cust_phone";
             this.cust_phone.Size = new System.Drawing.Size(217, 20);
             this.cust_phone.TabIndex = 7;
@@ -138,7 +130,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Montserrat", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(28, 226);
+            this.label5.Location = new System.Drawing.Point(28, 269);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(60, 18);
             this.label5.TabIndex = 10;
@@ -146,7 +138,7 @@
             // 
             // cust_address
             // 
-            this.cust_address.Location = new System.Drawing.Point(31, 247);
+            this.cust_address.Location = new System.Drawing.Point(31, 290);
             this.cust_address.Name = "cust_address";
             this.cust_address.Size = new System.Drawing.Size(217, 20);
             this.cust_address.TabIndex = 9;
@@ -155,37 +147,22 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Montserrat", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(28, 283);
+            this.label6.Location = new System.Drawing.Point(28, 326);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(176, 18);
+            this.label6.Size = new System.Drawing.Size(51, 18);
             this.label6.TabIndex = 12;
-            this.label6.Text = "Borrowed Book (book_id):";
-            // 
-            // date
-            // 
-            this.date.Font = new System.Drawing.Font("Montserrat", 8.249999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.date.Location = new System.Drawing.Point(31, 359);
-            this.date.Name = "date";
-            this.date.Size = new System.Drawing.Size(217, 21);
-            this.date.TabIndex = 13;
-            // 
-            // book
-            // 
-            this.book.Location = new System.Drawing.Point(31, 304);
-            this.book.Name = "book";
-            this.book.Size = new System.Drawing.Size(217, 20);
-            this.book.TabIndex = 14;
-            this.book.MaskInputRejected += new System.Windows.Forms.MaskInputRejectedEventHandler(this.book_MaskInputRejected);
+            this.label6.Text = "Phone";
+            this.label6.Click += new System.EventHandler(this.label6_Click);
             // 
             // label7
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Montserrat", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(28, 338);
+            this.label7.Location = new System.Drawing.Point(28, 381);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(110, 18);
+            this.label7.Size = new System.Drawing.Size(45, 18);
             this.label7.TabIndex = 15;
-            this.label7.Text = "Date Borrowed:";
+            this.label7.Text = "Email";
             // 
             // saveBtn
             // 
@@ -195,11 +172,11 @@
             this.saveBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.saveBtn.Font = new System.Drawing.Font("Montserrat", 9.749999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.saveBtn.ForeColor = System.Drawing.Color.White;
-            this.saveBtn.Location = new System.Drawing.Point(29, 522);
+            this.saveBtn.Location = new System.Drawing.Point(31, 460);
             this.saveBtn.Name = "saveBtn";
-            this.saveBtn.Size = new System.Drawing.Size(72, 31);
+            this.saveBtn.Size = new System.Drawing.Size(107, 31);
             this.saveBtn.TabIndex = 16;
-            this.saveBtn.Text = "Save";
+            this.saveBtn.Text = "Add";
             this.saveBtn.UseVisualStyleBackColor = false;
             this.saveBtn.Click += new System.EventHandler(this.saveBtn_Click);
             // 
@@ -211,9 +188,9 @@
             this.updateBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.updateBtn.Font = new System.Drawing.Font("Montserrat", 9.749999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.updateBtn.ForeColor = System.Drawing.Color.White;
-            this.updateBtn.Location = new System.Drawing.Point(107, 522);
+            this.updateBtn.Location = new System.Drawing.Point(144, 460);
             this.updateBtn.Name = "updateBtn";
-            this.updateBtn.Size = new System.Drawing.Size(72, 31);
+            this.updateBtn.Size = new System.Drawing.Size(104, 31);
             this.updateBtn.TabIndex = 17;
             this.updateBtn.Text = "Update";
             this.updateBtn.UseVisualStyleBackColor = false;
@@ -227,9 +204,9 @@
             this.deleteBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.deleteBtn.Font = new System.Drawing.Font("Montserrat", 9.749999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.deleteBtn.ForeColor = System.Drawing.Color.White;
-            this.deleteBtn.Location = new System.Drawing.Point(185, 522);
+            this.deleteBtn.Location = new System.Drawing.Point(172, 497);
             this.deleteBtn.Name = "deleteBtn";
-            this.deleteBtn.Size = new System.Drawing.Size(63, 31);
+            this.deleteBtn.Size = new System.Drawing.Size(76, 31);
             this.deleteBtn.TabIndex = 18;
             this.deleteBtn.Text = "Delete";
             this.deleteBtn.UseVisualStyleBackColor = false;
@@ -266,14 +243,14 @@
             this.Column4,
             this.Column6,
             this.Column5});
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.DarkSlateGray;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Montserrat", 8.249999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.SandyBrown;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridView1.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = System.Drawing.Color.DarkSlateGray;
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Montserrat", 8.249999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.SandyBrown;
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridView1.DefaultCellStyle = dataGridViewCellStyle6;
             this.dataGridView1.Location = new System.Drawing.Point(271, 56);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
@@ -283,112 +260,11 @@
             this.dataGridView1.TabIndex = 21;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Montserrat", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(-3, 7);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(161, 18);
-            this.label10.TabIndex = 27;
-            this.label10.Text = "Book already returned?";
-            // 
-            // radioButton5
-            // 
-            this.radioButton5.AutoSize = true;
-            this.radioButton5.Font = new System.Drawing.Font("Montserrat", 8.999999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radioButton5.Location = new System.Drawing.Point(101, 28);
-            this.radioButton5.Name = "radioButton5";
-            this.radioButton5.Size = new System.Drawing.Size(43, 20);
-            this.radioButton5.TabIndex = 29;
-            this.radioButton5.TabStop = true;
-            this.radioButton5.Text = "No";
-            this.radioButton5.UseVisualStyleBackColor = true;
-            // 
-            // radioButton6
-            // 
-            this.radioButton6.AutoSize = true;
-            this.radioButton6.Font = new System.Drawing.Font("Montserrat", 8.999999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radioButton6.Location = new System.Drawing.Point(16, 28);
-            this.radioButton6.Name = "radioButton6";
-            this.radioButton6.Size = new System.Drawing.Size(45, 20);
-            this.radioButton6.TabIndex = 28;
-            this.radioButton6.TabStop = true;
-            this.radioButton6.Text = "Yes";
-            this.radioButton6.UseVisualStyleBackColor = true;
-            // 
-            // panel1
-            // 
-            this.panel1.Controls.Add(this.label9);
-            this.panel1.Controls.Add(this.radioButton2);
-            this.panel1.Controls.Add(this.radioButton1);
-            this.panel1.Location = new System.Drawing.Point(29, 395);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(195, 55);
-            this.panel1.TabIndex = 30;
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Montserrat", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(-3, 9);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(44, 18);
-            this.label9.TabIndex = 29;
-            this.label9.Text = "Paid?";
-            // 
-            // radioButton2
-            // 
-            this.radioButton2.AutoSize = true;
-            this.radioButton2.Font = new System.Drawing.Font("Montserrat", 8.999999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radioButton2.Location = new System.Drawing.Point(101, 30);
-            this.radioButton2.Name = "radioButton2";
-            this.radioButton2.Size = new System.Drawing.Size(43, 20);
-            this.radioButton2.TabIndex = 28;
-            this.radioButton2.TabStop = true;
-            this.radioButton2.Text = "No";
-            this.radioButton2.UseVisualStyleBackColor = true;
-            // 
-            // radioButton1
-            // 
-            this.radioButton1.AutoSize = true;
-            this.radioButton1.Font = new System.Drawing.Font("Montserrat", 8.999999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radioButton1.Location = new System.Drawing.Point(16, 30);
-            this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(45, 20);
-            this.radioButton1.TabIndex = 27;
-            this.radioButton1.TabStop = true;
-            this.radioButton1.Text = "Yes";
-            this.radioButton1.UseVisualStyleBackColor = true;
-            // 
-            // panel2
-            // 
-            this.panel2.Controls.Add(this.label10);
-            this.panel2.Controls.Add(this.radioButton5);
-            this.panel2.Controls.Add(this.radioButton6);
-            this.panel2.Location = new System.Drawing.Point(29, 456);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(195, 55);
-            this.panel2.TabIndex = 31;
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.label11.Font = new System.Drawing.Font("Montserrat", 8.249999F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.label11.Location = new System.Drawing.Point(213, 40);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(35, 15);
-            this.label11.TabIndex = 32;
-            this.label11.Text = "Clear";
-            this.label11.Click += new System.EventHandler(this.label11_Click);
-            // 
             // Column0
             // 
             this.Column0.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.Column0.DefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.Column0.DefaultCellStyle = dataGridViewCellStyle5;
             this.Column0.HeaderText = "patient_id";
             this.Column0.Name = "Column0";
             this.Column0.ReadOnly = true;
@@ -440,13 +316,66 @@
             this.Column5.Name = "Column5";
             this.Column5.ReadOnly = true;
             // 
-            // Rental
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.label11.Font = new System.Drawing.Font("Montserrat", 8.249999F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.label11.Location = new System.Drawing.Point(213, 83);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(35, 15);
+            this.label11.TabIndex = 32;
+            this.label11.Text = "Clear";
+            this.label11.Click += new System.EventHandler(this.label11_Click);
+            // 
+            // patientPhone
+            // 
+            this.patientPhone.Location = new System.Drawing.Point(31, 347);
+            this.patientPhone.Name = "patientPhone";
+            this.patientPhone.Size = new System.Drawing.Size(217, 20);
+            this.patientPhone.TabIndex = 33;
+            // 
+            // patientEmail
+            // 
+            this.patientEmail.Location = new System.Drawing.Point(31, 414);
+            this.patientEmail.Name = "patientEmail";
+            this.patientEmail.Size = new System.Drawing.Size(217, 20);
+            this.patientEmail.TabIndex = 34;
+            // 
+            // viewBtn
+            // 
+            this.viewBtn.BackColor = System.Drawing.Color.DarkKhaki;
+            this.viewBtn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.viewBtn.FlatAppearance.BorderSize = 0;
+            this.viewBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.viewBtn.Font = new System.Drawing.Font("Montserrat", 9.749999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.viewBtn.ForeColor = System.Drawing.Color.White;
+            this.viewBtn.Location = new System.Drawing.Point(31, 497);
+            this.viewBtn.Name = "viewBtn";
+            this.viewBtn.Size = new System.Drawing.Size(135, 31);
+            this.viewBtn.TabIndex = 35;
+            this.viewBtn.Text = "View Health Info";
+            this.viewBtn.UseVisualStyleBackColor = false;
+            this.viewBtn.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // panel1
+            // 
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(1055, 584);
+            this.panel1.TabIndex = 0;
+            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
+            // 
+            // Patient
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.viewBtn);
+            this.Controls.Add(this.patientEmail);
+            this.Controls.Add(this.patientPhone);
             this.Controls.Add(this.label11);
-            this.Controls.Add(this.panel2);
-            this.Controls.Add(this.panel1);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.cust_search);
@@ -454,8 +383,6 @@
             this.Controls.Add(this.updateBtn);
             this.Controls.Add(this.saveBtn);
             this.Controls.Add(this.label7);
-            this.Controls.Add(this.book);
-            this.Controls.Add(this.date);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.cust_address);
@@ -466,15 +393,12 @@
             this.Controls.Add(this.cust_email);
             this.Controls.Add(this.cust_name);
             this.Controls.Add(this.label1);
-            this.Name = "Rental";
+            this.Controls.Add(this.panel1);
+            this.Name = "Patient";
             this.Size = new System.Drawing.Size(1055, 584);
             this.Load += new System.EventHandler(this.Rental_Load);
             this.Click += new System.EventHandler(this.Rental_Click);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
-            this.panel2.ResumeLayout(false);
-            this.panel2.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -492,8 +416,6 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.MaskedTextBox cust_address;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.DateTimePicker date;
-        private System.Windows.Forms.MaskedTextBox book;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Button saveBtn;
         private System.Windows.Forms.Button updateBtn;
@@ -501,14 +423,6 @@
         private System.Windows.Forms.TextBox cust_search;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.RadioButton radioButton5;
-        private System.Windows.Forms.RadioButton radioButton6;
-        private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.RadioButton radioButton2;
-        private System.Windows.Forms.RadioButton radioButton1;
-        private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column0;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
@@ -517,5 +431,9 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column6;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
+        private System.Windows.Forms.MaskedTextBox patientPhone;
+        private System.Windows.Forms.MaskedTextBox patientEmail;
+        private System.Windows.Forms.Button viewBtn;
+        private System.Windows.Forms.Panel panel1;
     }
 }

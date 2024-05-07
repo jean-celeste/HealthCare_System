@@ -159,11 +159,11 @@
     <Compile Include="Recovery.Designer.cs">
       <DependentUpon>Recovery.cs</DependentUpon>
     </Compile>
-    <Compile Include="Rental.cs">
+    <Compile Include="Patient.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Rental.Designer.cs">
-      <DependentUpon>Rental.cs</DependentUpon>
+    <Compile Include="Patient.Designer.cs">
+      <DependentUpon>Patient.cs</DependentUpon>
     </Compile>
     <Compile Include="Sales.cs">
       <SubType>UserControl</SubType>
@@ -215,8 +215,8 @@
     <EmbeddedResource Include="Recovery.resx">
       <DependentUpon>Recovery.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Rental.resx">
-      <DependentUpon>Rental.cs</DependentUpon>
+    <EmbeddedResource Include="Patient.resx">
+      <DependentUpon>Patient.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Sales.resx">
       <DependentUpon>Sales.cs</DependentUpon>
