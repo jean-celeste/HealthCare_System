@@ -14,6 +14,7 @@ namespace HealthCare_System
     public partial class health_info : UserControl
     {
         private MySqlConnection conn;
+        private string patientId;
         public health_info()
         {
             InitializeComponent();
@@ -41,6 +42,7 @@ namespace HealthCare_System
             {
                 if (reader.Read())
                 {
+                    name.Text = reader["patient_name"].ToString();
                     patientIDtxt.Text = reader["patient_id"].ToString();
                     recordIDtxt.Text = reader["record_id"].ToString();
                     hospNumTxt.Text = reader["hospital_num"].ToString();
@@ -51,12 +53,14 @@ namespace HealthCare_System
                     medTxt.Text = reader["medication"].ToString();
                     dateTxt.Text = reader["last_visit_date"].ToString();
                     medHist.Text = reader["medical_hist"].ToString();
-                    famHist.Text = reader["family_hist"].ToString();
+                    famHist.Text = reader["fam_hist"].ToString();
                 }
             }
         }
         public void LoadData(string patient_id)
         {
+            patientId = patient_id;
+
             if (conn.State != ConnectionState.Open)
             {
                 conn.Open();
@@ -115,6 +119,29 @@ namespace HealthCare_System
         }
 
         private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            string patient_id = patientId;
+
+            UpdateHealthInfo info = new UpdateHealthInfo();
+            info.LoadData(patient_id);
+            info.ShowDialog();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            string patient_id = patientId;
+
+            AddHealthInfo info = new AddHealthInfo(patient_id);
+            
+            info.ShowDialog();
+        }
+
+        private void label2_Click_1(object sender, EventArgs e)
         {
 
         }

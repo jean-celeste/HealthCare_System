@@ -20,14 +20,17 @@ namespace HealthCare_System
     {
         //private DatabaseConnection dbConn;
         //Connection String
+        private MySqlConnection conn;
         private UserAdmin_Prompt userAdminPromptInstance;
-
+        private string name;
 
 
         public LoginUser()
         {
             InitializeComponent();
-           // this.dbConn = dbConn;
+            conn = DatabaseConnection.GetConnection();
+            this.FormClosing += LoginSignupForm_FormClosing;
+            // this.dbConn = dbConn;
         }
 
 
@@ -62,12 +65,15 @@ namespace HealthCare_System
 
             try
             {
-                conn.Open();
+                if (conn.State != ConnectionState.Open)
+                {
+                    conn.Open();
+                }
 
                 string username = usernameTextBox.Text;
                 string password = passwordTextBox.Text;
 
-                string query = $"SELECT COUNT(*) FROM user WHERE (username = '{username}' OR email = '{username}') AND password = '{password}'";
+                string query = $"SELECT patient_name FROM patient WHERE (username = '{username}' OR email = '{username}') AND password = '{password}'";
 
                 try
                 {
@@ -75,14 +81,19 @@ namespace HealthCare_System
 
                     MySqlCommand command = new MySqlCommand(query, conn);
 
-                    count = Convert.ToInt32(command.ExecuteScalar());
+                    using (MySqlDataReader reader = command.ExecuteReader())
+                    {
+                        if (reader.Read())
+                        {
+                            name = reader.GetString("patient_name");
+                        }
+                    }
 
-
-                    if (count > 0)
+                    if (!string.IsNullOrEmpty(name))
                     {
                         // User credentials are correct
-                        MessageBox.Show("Login successful!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        MainForm main = new MainForm(userAdminPromptInstance, this);
+                        MessageBox.Show("Login successful! Welcome, " + name, "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        MainUser main = new MainUser(userAdminPromptInstance, this, name);
                         main.Show();
                         this.Hide();
                     }
@@ -331,13 +342,26 @@ namespace HealthCare_System
             if (randomCode == (textBox1.Text).ToString())
             {
                 to = textBox8.Text;
-                Recovery recovery = new Recovery();
+                RecoveryUser recovery = new RecoveryUser();
                 this.Hide();
                 recovery.Show();
             }
             else
             {
                 MessageBox.Show("Wrong Verification Code!");
+            }
+        }
+        private void LoginSignupForm_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            // Ask the user for confirmation before closing the form
+            DialogResult result = MessageBox.Show("Are you sure you want to exit?", "Confirm Exit", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (result == DialogResult.No)
+            {
+                e.Cancel = true; // Cancel the closing event
+            }
+            else
+            {
+                e.Cancel = false; // Allow the form to close
             }
         }
 

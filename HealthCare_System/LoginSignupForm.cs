@@ -19,6 +19,7 @@ namespace HealthCare_System
     {
         //private DatabaseConnection dbConn;
         //Connection String
+        private MySqlConnection conn;
         private UserAdmin_Prompt userAdminPromptInstance;
 
 
@@ -26,7 +27,9 @@ namespace HealthCare_System
         public LoginSignupForm()
         {
             InitializeComponent();
-           // this.dbConn = dbConn;
+            conn = DatabaseConnection.GetConnection();
+            this.FormClosing += LoginSignupForm_FormClosing;
+            // this.dbConn = dbConn;
         }
 
 
@@ -57,11 +60,15 @@ namespace HealthCare_System
 
         private void button2_Click(object sender, EventArgs e)
         {
-            /*MySqlConnection conn = DatabaseConnection.GetConnection(); // Obtain the connection object
+            
 
             try
             {
-                conn.Open();
+                if (conn.State != ConnectionState.Open)
+                {
+                    conn.Open();
+                }
+
 
                 string username = usernameTextBox.Text;
                 string password = passwordTextBox.Text;
@@ -81,7 +88,7 @@ namespace HealthCare_System
                     {
                         // User credentials are correct
                         MessageBox.Show("Login successful!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        MainForm main = new MainForm(this);
+                        MainForm main = new MainForm(null, this);
                         main.Show();
                         this.Hide();
                     }
@@ -105,10 +112,8 @@ namespace HealthCare_System
             finally
             {
                 conn.Close(); // Close the connection
-            }*/
-            MainForm main = new MainForm(userAdminPromptInstance, this);
-            main.Show();
-            this.Hide();
+            }
+            
 
 
 
@@ -306,8 +311,26 @@ namespace HealthCare_System
                 MessageBox.Show("Wrong Verification Code!");
             }
         }
+        private void LoginSignupForm_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            // Ask the user for confirmation before closing the form
+            DialogResult result = MessageBox.Show("Are you sure you want to exit?", "Confirm Exit", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (result == DialogResult.No)
+            {
+                e.Cancel = true; // Cancel the closing event
+            }
+            else
+            {
+                e.Cancel = false; // Allow the form to close
+            }
+        }
 
         private void confirmPass_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox8_TextChanged(object sender, EventArgs e)
         {
 
         }

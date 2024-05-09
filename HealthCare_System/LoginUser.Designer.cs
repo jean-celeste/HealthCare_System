@@ -44,6 +44,21 @@
             this.emailLabel = new System.Windows.Forms.Label();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.signUpPanel = new System.Windows.Forms.Panel();
+            this.Address = new HealthCare_System.customTextBox();
+            this.Phone = new HealthCare_System.customTextBox();
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.label10 = new System.Windows.Forms.Label();
+            this.gender = new System.Windows.Forms.GroupBox();
+            this.radioButton2 = new System.Windows.Forms.RadioButton();
+            this.radioButton3 = new System.Windows.Forms.RadioButton();
+            this.radioButton1 = new System.Windows.Forms.RadioButton();
+            this.Age = new HealthCare_System.customTextBox();
+            this.confirmPass = new HealthCare_System.customTextBox();
+            this.password = new HealthCare_System.customTextBox();
+            this.email = new HealthCare_System.customTextBox();
+            this.username = new HealthCare_System.customTextBox();
+            this.LastName = new HealthCare_System.customTextBox();
+            this.FirstName = new HealthCare_System.customTextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.button3 = new System.Windows.Forms.Button();
             this.label7 = new System.Windows.Forms.Label();
@@ -62,26 +77,11 @@
             this.textBox8 = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
-            this.confirmPass = new HealthCare_System.customTextBox();
-            this.password = new HealthCare_System.customTextBox();
-            this.email = new HealthCare_System.customTextBox();
-            this.username = new HealthCare_System.customTextBox();
-            this.LastName = new HealthCare_System.customTextBox();
-            this.FirstName = new HealthCare_System.customTextBox();
-            this.radioButton1 = new System.Windows.Forms.RadioButton();
-            this.radioButton2 = new System.Windows.Forms.RadioButton();
-            this.radioButton3 = new System.Windows.Forms.RadioButton();
-            this.label10 = new System.Windows.Forms.Label();
-            this.panel4 = new System.Windows.Forms.Panel();
-            this.gender = new System.Windows.Forms.GroupBox();
-            this.Age = new HealthCare_System.customTextBox();
-            this.Phone = new HealthCare_System.customTextBox();
-            this.Address = new HealthCare_System.customTextBox();
             this.loginPanel.SuspendLayout();
             this.signUpPanel.SuspendLayout();
-            this.AccountRecovery.SuspendLayout();
             this.panel4.SuspendLayout();
             this.gender.SuspendLayout();
+            this.AccountRecovery.SuspendLayout();
             this.SuspendLayout();
             // 
             // goToLoginBtn
@@ -131,7 +131,7 @@
             this.loginPanel.Controls.Add(this.emailLabel);
             this.loginPanel.Location = new System.Drawing.Point(0, 58);
             this.loginPanel.Name = "loginPanel";
-            this.loginPanel.Size = new System.Drawing.Size(478, 551);
+            this.loginPanel.Size = new System.Drawing.Size(478, 578);
             this.loginPanel.TabIndex = 2;
             this.loginPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
@@ -268,6 +268,179 @@
             this.signUpPanel.TabIndex = 3;
             this.signUpPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint_1);
             // 
+            // Address
+            // 
+            this.Address.BackColor = System.Drawing.Color.White;
+            this.Address.customText = "Address";
+            this.Address.Location = new System.Drawing.Point(65, 108);
+            this.Address.Name = "Address";
+            this.Address.password = false;
+            this.Address.Size = new System.Drawing.Size(359, 48);
+            this.Address.TabIndex = 31;
+            this.Address.TextValue = "";
+            // 
+            // Phone
+            // 
+            this.Phone.BackColor = System.Drawing.Color.White;
+            this.Phone.customText = "Phone";
+            this.Phone.Location = new System.Drawing.Point(65, 214);
+            this.Phone.Name = "Phone";
+            this.Phone.password = false;
+            this.Phone.Size = new System.Drawing.Size(359, 48);
+            this.Phone.TabIndex = 30;
+            this.Phone.TextValue = "";
+            // 
+            // panel4
+            // 
+            this.panel4.BackColor = System.Drawing.Color.White;
+            this.panel4.Controls.Add(this.label10);
+            this.panel4.Controls.Add(this.gender);
+            this.panel4.Location = new System.Drawing.Point(65, 428);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(359, 65);
+            this.panel4.TabIndex = 29;
+            this.panel4.Paint += new System.Windows.Forms.PaintEventHandler(this.panel4_Paint);
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Montserrat", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.ForeColor = System.Drawing.Color.Black;
+            this.label10.Location = new System.Drawing.Point(15, 9);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(57, 18);
+            this.label10.TabIndex = 28;
+            this.label10.Text = "Gender";
+            // 
+            // gender
+            // 
+            this.gender.Controls.Add(this.radioButton2);
+            this.gender.Controls.Add(this.radioButton3);
+            this.gender.Controls.Add(this.radioButton1);
+            this.gender.Location = new System.Drawing.Point(18, 16);
+            this.gender.Name = "gender";
+            this.gender.Size = new System.Drawing.Size(330, 38);
+            this.gender.TabIndex = 29;
+            this.gender.TabStop = false;
+            // 
+            // radioButton2
+            // 
+            this.radioButton2.AutoSize = true;
+            this.radioButton2.Font = new System.Drawing.Font("Montserrat", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.radioButton2.ForeColor = System.Drawing.Color.Black;
+            this.radioButton2.Location = new System.Drawing.Point(100, 11);
+            this.radioButton2.Name = "radioButton2";
+            this.radioButton2.Size = new System.Drawing.Size(75, 22);
+            this.radioButton2.TabIndex = 26;
+            this.radioButton2.TabStop = true;
+            this.radioButton2.Text = "Female";
+            this.radioButton2.UseVisualStyleBackColor = true;
+            // 
+            // radioButton3
+            // 
+            this.radioButton3.AutoSize = true;
+            this.radioButton3.Font = new System.Drawing.Font("Montserrat", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.radioButton3.ForeColor = System.Drawing.Color.Black;
+            this.radioButton3.Location = new System.Drawing.Point(192, 11);
+            this.radioButton3.Name = "radioButton3";
+            this.radioButton3.Size = new System.Drawing.Size(132, 22);
+            this.radioButton3.TabIndex = 27;
+            this.radioButton3.TabStop = true;
+            this.radioButton3.Text = "Prefer not to Say";
+            this.radioButton3.UseVisualStyleBackColor = true;
+            // 
+            // radioButton1
+            // 
+            this.radioButton1.AutoSize = true;
+            this.radioButton1.Font = new System.Drawing.Font("Montserrat", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.radioButton1.ForeColor = System.Drawing.Color.Black;
+            this.radioButton1.Location = new System.Drawing.Point(19, 11);
+            this.radioButton1.Name = "radioButton1";
+            this.radioButton1.Size = new System.Drawing.Size(57, 22);
+            this.radioButton1.TabIndex = 25;
+            this.radioButton1.TabStop = true;
+            this.radioButton1.Text = "Male";
+            this.radioButton1.UseVisualStyleBackColor = true;
+            // 
+            // Age
+            // 
+            this.Age.BackColor = System.Drawing.Color.White;
+            this.Age.customText = "Age";
+            this.Age.Location = new System.Drawing.Point(329, 54);
+            this.Age.Name = "Age";
+            this.Age.password = false;
+            this.Age.Size = new System.Drawing.Size(95, 48);
+            this.Age.TabIndex = 24;
+            this.Age.TextValue = "";
+            // 
+            // confirmPass
+            // 
+            this.confirmPass.BackColor = System.Drawing.Color.White;
+            this.confirmPass.customText = "Confirm Password";
+            this.confirmPass.Location = new System.Drawing.Point(65, 375);
+            this.confirmPass.Name = "confirmPass";
+            this.confirmPass.password = true;
+            this.confirmPass.Size = new System.Drawing.Size(359, 48);
+            this.confirmPass.TabIndex = 23;
+            this.confirmPass.TextValue = "";
+            this.confirmPass.Load += new System.EventHandler(this.confirmPass_Load);
+            // 
+            // password
+            // 
+            this.password.BackColor = System.Drawing.Color.White;
+            this.password.customText = "Password";
+            this.password.Location = new System.Drawing.Point(65, 321);
+            this.password.Name = "password";
+            this.password.password = true;
+            this.password.Size = new System.Drawing.Size(359, 48);
+            this.password.TabIndex = 22;
+            this.password.TextValue = "";
+            // 
+            // email
+            // 
+            this.email.BackColor = System.Drawing.Color.White;
+            this.email.customText = "Email";
+            this.email.Location = new System.Drawing.Point(65, 161);
+            this.email.Name = "email";
+            this.email.password = false;
+            this.email.Size = new System.Drawing.Size(359, 48);
+            this.email.TabIndex = 21;
+            this.email.TextValue = "";
+            // 
+            // username
+            // 
+            this.username.BackColor = System.Drawing.Color.White;
+            this.username.customText = "Username";
+            this.username.Location = new System.Drawing.Point(65, 267);
+            this.username.Name = "username";
+            this.username.password = false;
+            this.username.Size = new System.Drawing.Size(359, 48);
+            this.username.TabIndex = 20;
+            this.username.TextValue = "";
+            // 
+            // LastName
+            // 
+            this.LastName.BackColor = System.Drawing.Color.White;
+            this.LastName.customText = "Last Name";
+            this.LastName.Location = new System.Drawing.Point(197, 54);
+            this.LastName.Name = "LastName";
+            this.LastName.password = false;
+            this.LastName.Size = new System.Drawing.Size(126, 48);
+            this.LastName.TabIndex = 19;
+            this.LastName.TextValue = "";
+            // 
+            // FirstName
+            // 
+            this.FirstName.BackColor = System.Drawing.Color.White;
+            this.FirstName.customText = "First Name";
+            this.FirstName.Location = new System.Drawing.Point(65, 54);
+            this.FirstName.Name = "FirstName";
+            this.FirstName.password = false;
+            this.FirstName.Size = new System.Drawing.Size(126, 48);
+            this.FirstName.TabIndex = 18;
+            this.FirstName.TextValue = "";
+            this.FirstName.Load += new System.EventHandler(this.customTextBox1_Load);
+            // 
             // label4
             // 
             this.label4.AutoSize = true;
@@ -374,7 +547,7 @@
             this.AccountRecovery.Controls.Add(this.label8);
             this.AccountRecovery.Location = new System.Drawing.Point(0, 58);
             this.AccountRecovery.Name = "AccountRecovery";
-            this.AccountRecovery.Size = new System.Drawing.Size(478, 551);
+            this.AccountRecovery.Size = new System.Drawing.Size(478, 578);
             this.AccountRecovery.TabIndex = 9;
             // 
             // button5
@@ -481,179 +654,6 @@
             this.label8.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             this.label8.Click += new System.EventHandler(this.label8_Click);
             // 
-            // confirmPass
-            // 
-            this.confirmPass.BackColor = System.Drawing.Color.White;
-            this.confirmPass.customText = "Confirm Password";
-            this.confirmPass.Location = new System.Drawing.Point(65, 375);
-            this.confirmPass.Name = "confirmPass";
-            this.confirmPass.password = true;
-            this.confirmPass.Size = new System.Drawing.Size(359, 48);
-            this.confirmPass.TabIndex = 23;
-            this.confirmPass.TextValue = "";
-            this.confirmPass.Load += new System.EventHandler(this.confirmPass_Load);
-            // 
-            // password
-            // 
-            this.password.BackColor = System.Drawing.Color.White;
-            this.password.customText = "Password";
-            this.password.Location = new System.Drawing.Point(65, 321);
-            this.password.Name = "password";
-            this.password.password = true;
-            this.password.Size = new System.Drawing.Size(359, 48);
-            this.password.TabIndex = 22;
-            this.password.TextValue = "";
-            // 
-            // email
-            // 
-            this.email.BackColor = System.Drawing.Color.White;
-            this.email.customText = "Email";
-            this.email.Location = new System.Drawing.Point(65, 161);
-            this.email.Name = "email";
-            this.email.password = false;
-            this.email.Size = new System.Drawing.Size(359, 48);
-            this.email.TabIndex = 21;
-            this.email.TextValue = "";
-            // 
-            // username
-            // 
-            this.username.BackColor = System.Drawing.Color.White;
-            this.username.customText = "Username";
-            this.username.Location = new System.Drawing.Point(65, 267);
-            this.username.Name = "username";
-            this.username.password = false;
-            this.username.Size = new System.Drawing.Size(359, 48);
-            this.username.TabIndex = 20;
-            this.username.TextValue = "";
-            // 
-            // LastName
-            // 
-            this.LastName.BackColor = System.Drawing.Color.White;
-            this.LastName.customText = "Last Name";
-            this.LastName.Location = new System.Drawing.Point(197, 54);
-            this.LastName.Name = "LastName";
-            this.LastName.password = false;
-            this.LastName.Size = new System.Drawing.Size(126, 48);
-            this.LastName.TabIndex = 19;
-            this.LastName.TextValue = "";
-            // 
-            // FirstName
-            // 
-            this.FirstName.BackColor = System.Drawing.Color.White;
-            this.FirstName.customText = "First Name";
-            this.FirstName.Location = new System.Drawing.Point(65, 54);
-            this.FirstName.Name = "FirstName";
-            this.FirstName.password = false;
-            this.FirstName.Size = new System.Drawing.Size(126, 48);
-            this.FirstName.TabIndex = 18;
-            this.FirstName.TextValue = "";
-            this.FirstName.Load += new System.EventHandler(this.customTextBox1_Load);
-            // 
-            // radioButton1
-            // 
-            this.radioButton1.AutoSize = true;
-            this.radioButton1.Font = new System.Drawing.Font("Montserrat", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radioButton1.ForeColor = System.Drawing.Color.Black;
-            this.radioButton1.Location = new System.Drawing.Point(19, 11);
-            this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(57, 22);
-            this.radioButton1.TabIndex = 25;
-            this.radioButton1.TabStop = true;
-            this.radioButton1.Text = "Male";
-            this.radioButton1.UseVisualStyleBackColor = true;
-            // 
-            // radioButton2
-            // 
-            this.radioButton2.AutoSize = true;
-            this.radioButton2.Font = new System.Drawing.Font("Montserrat", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radioButton2.ForeColor = System.Drawing.Color.Black;
-            this.radioButton2.Location = new System.Drawing.Point(100, 11);
-            this.radioButton2.Name = "radioButton2";
-            this.radioButton2.Size = new System.Drawing.Size(75, 22);
-            this.radioButton2.TabIndex = 26;
-            this.radioButton2.TabStop = true;
-            this.radioButton2.Text = "Female";
-            this.radioButton2.UseVisualStyleBackColor = true;
-            // 
-            // radioButton3
-            // 
-            this.radioButton3.AutoSize = true;
-            this.radioButton3.Font = new System.Drawing.Font("Montserrat", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radioButton3.ForeColor = System.Drawing.Color.Black;
-            this.radioButton3.Location = new System.Drawing.Point(192, 11);
-            this.radioButton3.Name = "radioButton3";
-            this.radioButton3.Size = new System.Drawing.Size(132, 22);
-            this.radioButton3.TabIndex = 27;
-            this.radioButton3.TabStop = true;
-            this.radioButton3.Text = "Prefer not to Say";
-            this.radioButton3.UseVisualStyleBackColor = true;
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Montserrat", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.ForeColor = System.Drawing.Color.Black;
-            this.label10.Location = new System.Drawing.Point(15, 9);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(57, 18);
-            this.label10.TabIndex = 28;
-            this.label10.Text = "Gender";
-            // 
-            // panel4
-            // 
-            this.panel4.BackColor = System.Drawing.Color.White;
-            this.panel4.Controls.Add(this.label10);
-            this.panel4.Controls.Add(this.gender);
-            this.panel4.Location = new System.Drawing.Point(65, 428);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(359, 65);
-            this.panel4.TabIndex = 29;
-            this.panel4.Paint += new System.Windows.Forms.PaintEventHandler(this.panel4_Paint);
-            // 
-            // gender
-            // 
-            this.gender.Controls.Add(this.radioButton2);
-            this.gender.Controls.Add(this.radioButton3);
-            this.gender.Controls.Add(this.radioButton1);
-            this.gender.Location = new System.Drawing.Point(18, 16);
-            this.gender.Name = "gender";
-            this.gender.Size = new System.Drawing.Size(330, 38);
-            this.gender.TabIndex = 29;
-            this.gender.TabStop = false;
-            // 
-            // Age
-            // 
-            this.Age.BackColor = System.Drawing.Color.White;
-            this.Age.customText = "Age";
-            this.Age.Location = new System.Drawing.Point(329, 54);
-            this.Age.Name = "Age";
-            this.Age.password = false;
-            this.Age.Size = new System.Drawing.Size(95, 48);
-            this.Age.TabIndex = 24;
-            this.Age.TextValue = "";
-            // 
-            // Phone
-            // 
-            this.Phone.BackColor = System.Drawing.Color.White;
-            this.Phone.customText = "Phone";
-            this.Phone.Location = new System.Drawing.Point(65, 214);
-            this.Phone.Name = "Phone";
-            this.Phone.password = false;
-            this.Phone.Size = new System.Drawing.Size(359, 48);
-            this.Phone.TabIndex = 30;
-            this.Phone.TextValue = "";
-            // 
-            // Address
-            // 
-            this.Address.BackColor = System.Drawing.Color.White;
-            this.Address.customText = "Address";
-            this.Address.Location = new System.Drawing.Point(65, 108);
-            this.Address.Name = "Address";
-            this.Address.password = false;
-            this.Address.Size = new System.Drawing.Size(359, 48);
-            this.Address.TabIndex = 31;
-            this.Address.TextValue = "";
-            // 
             // LoginUser
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -662,9 +662,9 @@
             this.ClientSize = new System.Drawing.Size(478, 636);
             this.Controls.Add(this.signUpBtn);
             this.Controls.Add(this.goToLoginBtn);
-            this.Controls.Add(this.signUpPanel);
             this.Controls.Add(this.loginPanel);
             this.Controls.Add(this.AccountRecovery);
+            this.Controls.Add(this.signUpPanel);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "LoginUser";
@@ -675,12 +675,12 @@
             this.loginPanel.PerformLayout();
             this.signUpPanel.ResumeLayout(false);
             this.signUpPanel.PerformLayout();
-            this.AccountRecovery.ResumeLayout(false);
-            this.AccountRecovery.PerformLayout();
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
             this.gender.ResumeLayout(false);
             this.gender.PerformLayout();
+            this.AccountRecovery.ResumeLayout(false);
+            this.AccountRecovery.PerformLayout();
             this.ResumeLayout(false);
 
         }
