@@ -37,7 +37,7 @@ CREATE TABLE `health_records` (
   PRIMARY KEY (`record_id`),
   KEY `fk_patient_id` (`patient_id`),
   CONSTRAINT `fk_patient_id` FOREIGN KEY (`patient_id`) REFERENCES `patient` (`patient_id`) ON DELETE RESTRICT ON UPDATE RESTRICT
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -46,7 +46,7 @@ CREATE TABLE `health_records` (
 
 LOCK TABLES `health_records` WRITE;
 /*!40000 ALTER TABLE `health_records` DISABLE KEYS */;
-INSERT INTO `health_records` VALUES (2,'P-0001','HN-12345',101,'Hypertension ','ACE inhibitor (Lisinosopril) - Oral, Once daily (in the morning)','Penicillin','Lisinosopril','2024-04-25','History of Hypertension for the past 5 years','No history of heart disease, Mother: Hypertension, Father: Heart Attack');
+INSERT INTO `health_records` VALUES (2,'P-0001','HN-12345',101,'Hypertension ','ACE inhibitor (Lisinosopril) - Oral, Once daily (in the morning)','Penicillin','Lisinosopril','2024-05-08','History of Hypertension for the past 5 years','No history of heart disease, Mother: Hypertension, Father: Heart Attack'),(3,'P-0002','HN-2712',202,'Hypertension','Prescribed Meds','None','Lisinopril','2024-05-10','None','Family history of hypertension');
 /*!40000 ALTER TABLE `health_records` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -60,7 +60,7 @@ DROP TABLE IF EXISTS `id_int`;
 CREATE TABLE `id_int` (
   `id` int NOT NULL AUTO_INCREMENT,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -69,7 +69,7 @@ CREATE TABLE `id_int` (
 
 LOCK TABLES `id_int` WRITE;
 /*!40000 ALTER TABLE `id_int` DISABLE KEYS */;
-INSERT INTO `id_int` VALUES (1),(2);
+INSERT INTO `id_int` VALUES (1),(2),(3);
 /*!40000 ALTER TABLE `id_int` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -88,6 +88,8 @@ CREATE TABLE `patient` (
   `address` varchar(255) DEFAULT NULL,
   `phone` varchar(20) DEFAULT NULL,
   `email` varchar(255) DEFAULT NULL,
+  `username` varchar(45) DEFAULT NULL,
+  `password` varchar(45) DEFAULT NULL,
   PRIMARY KEY (`patient_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
@@ -98,7 +100,7 @@ CREATE TABLE `patient` (
 
 LOCK TABLES `patient` WRITE;
 /*!40000 ALTER TABLE `patient` DISABLE KEYS */;
-INSERT INTO `patient` VALUES ('P-0001','Jean',21,'Male','Naga','09876543212','jean@sample.com'),('P-0002','John Smith',45,'Male','Legazpi','0987654321','john@sample.com');
+INSERT INTO `patient` VALUES ('P-0001','Jean',21,'Male','Naga','09876543212','celestecarljean17@gmail.com','jae','pass'),('P-0002','John Smith',45,'Male','Legazpi','0987654321','john@sample.com','john','password'),('P-0003','Ayra Napay',21,'Female','Naga','09876543218','ay@gmail.com','aynaps','1234');
 /*!40000 ALTER TABLE `patient` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!50003 SET @saved_cs_client      = @@character_set_client */ ;
@@ -134,7 +136,7 @@ CREATE TABLE `user` (
   `username` varchar(100) NOT NULL,
   `password` varchar(100) NOT NULL,
   PRIMARY KEY (`user_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -143,7 +145,7 @@ CREATE TABLE `user` (
 
 LOCK TABLES `user` WRITE;
 /*!40000 ALTER TABLE `user` DISABLE KEYS */;
-INSERT INTO `user` VALUES (1,'admin','admin@gmal.com','admin','pass');
+INSERT INTO `user` VALUES (1,'admin','admin@gmal.com','admin','pass'),(2,'jean','celestecarljean17@gmail.com','admin1','12345');
 /*!40000 ALTER TABLE `user` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -164,4 +166,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2024-05-08 13:03:56
+-- Dump completed on 2024-05-10  5:57:22
