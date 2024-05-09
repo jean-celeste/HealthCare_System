@@ -1,6 +1,6 @@
 ﻿namespace HealthCare_System
 {
-    partial class customControl1
+    partial class userHome
     {
         /// <summary> 
         /// Required designer variable.
@@ -28,9 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(customControl1));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(userHome));
             this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
+            this.nameLbl = new System.Windows.Forms.Label();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
@@ -41,43 +41,41 @@
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Montserrat Black", 48F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(176)))), ((int)(((byte)(186)))));
-            this.label1.Location = new System.Drawing.Point(30, 92);
+            this.label1.Location = new System.Drawing.Point(42, 107);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(385, 88);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Welcome!";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
+            this.label1.Size = new System.Drawing.Size(384, 88);
+            this.label1.TabIndex = 1;
+            this.label1.Text = "Welcome,";
             // 
-            // label2
+            // nameLbl
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.DarkSlateGray;
-            this.label2.Location = new System.Drawing.Point(41, 218);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(508, 198);
-            this.label2.TabIndex = 1;
-            this.label2.Text = resources.GetString("label2.Text");
-            this.label2.Click += new System.EventHandler(this.label2_Click);
+            this.nameLbl.AutoSize = true;
+            this.nameLbl.Font = new System.Drawing.Font("Montserrat Black", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.nameLbl.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(176)))), ((int)(((byte)(186)))));
+            this.nameLbl.Location = new System.Drawing.Point(62, 183);
+            this.nameLbl.Name = "nameLbl";
+            this.nameLbl.Size = new System.Drawing.Size(0, 40);
+            this.nameLbl.TabIndex = 2;
             // 
             // pictureBox2
             // 
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(555, 0);
+            this.pictureBox2.Location = new System.Drawing.Point(470, 0);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(854, 584);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox2.TabIndex = 12;
+            this.pictureBox2.TabIndex = 11;
             this.pictureBox2.TabStop = false;
             // 
-            // customControl1
+            // userHome
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(249)))), ((int)(((byte)(240)))));
             this.Controls.Add(this.pictureBox2);
-            this.Controls.Add(this.label2);
+            this.Controls.Add(this.nameLbl);
             this.Controls.Add(this.label1);
-            this.Name = "customControl1";
+            this.Name = "userHome";
             this.Size = new System.Drawing.Size(1055, 584);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
@@ -88,7 +86,7 @@
         #endregion
 
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label nameLbl;
         private System.Windows.Forms.PictureBox pictureBox2;
     }
 }

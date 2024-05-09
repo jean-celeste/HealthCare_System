@@ -12,19 +12,20 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using MySql.Data.MySqlClient;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.Button;
 
 namespace HealthCare_System
 {
-    public partial class LoginSignupForm : Form
+    public partial class LoginUser : Form
     {
         //private DatabaseConnection dbConn;
         //Connection String
         private MySqlConnection conn;
         private UserAdmin_Prompt userAdminPromptInstance;
+        private string name;
 
 
-
-        public LoginSignupForm()
+        public LoginUser()
         {
             InitializeComponent();
             conn = DatabaseConnection.GetConnection();
@@ -60,7 +61,7 @@ namespace HealthCare_System
 
         private void button2_Click(object sender, EventArgs e)
         {
-            
+            MySqlConnection conn = DatabaseConnection.GetConnection(); // Obtain the connection object
 
             try
             {
@@ -69,11 +70,10 @@ namespace HealthCare_System
                     conn.Open();
                 }
 
-
                 string username = usernameTextBox.Text;
                 string password = passwordTextBox.Text;
 
-                string query = $"SELECT COUNT(*) FROM user WHERE (username = '{username}' OR email = '{username}') AND password = '{password}'";
+                string query = $"SELECT patient_name FROM patient WHERE (username = '{username}' OR email = '{username}') AND password = '{password}'";
 
                 try
                 {
@@ -81,14 +81,19 @@ namespace HealthCare_System
 
                     MySqlCommand command = new MySqlCommand(query, conn);
 
-                    count = Convert.ToInt32(command.ExecuteScalar());
+                    using (MySqlDataReader reader = command.ExecuteReader())
+                    {
+                        if (reader.Read())
+                        {
+                            name = reader.GetString("patient_name");
+                        }
+                    }
 
-
-                    if (count > 0)
+                    if (!string.IsNullOrEmpty(name))
                     {
                         // User credentials are correct
-                        MessageBox.Show("Login successful!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        MainForm main = new MainForm(null, this);
+                        MessageBox.Show("Login successful! Welcome, " + name, "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        MainUser main = new MainUser(userAdminPromptInstance, this, name);
                         main.Show();
                         this.Hide();
                     }
@@ -113,7 +118,9 @@ namespace HealthCare_System
             {
                 conn.Close(); // Close the connection
             }
-            
+            /*MainForm main = new MainForm(this);
+            main.Show();
+            this.Hide();*/
 
 
 
@@ -182,24 +189,57 @@ namespace HealthCare_System
             {
                 conn.Open();
 
+
                 // Retrieve text values from custom controls
                 string name = FirstName.TextValue + " " + LastName.TextValue;
+                string age = Age.TextValue;
+                string address = Address.TextValue;
+                string gender = "";
+                string phone = Phone.TextValue;
                 string signUpUsername = username.TextValue;
                 string signUpPassword = password.TextValue;
                 string signUpEmail = email.TextValue;
+
+                
+
+                if (radioButton1.Checked)
+                {
+                    gender = "Male";
+                }
+                else if (radioButton2.Checked)
+                {
+                    gender = "Female";
+                }
+                else if (radioButton3.Checked)
+                {
+                    gender = "Pefer Not to Say";
+                }
+                else
+                {
+                    // None of the radio buttons are checked, handle this case accordingly
+                    // For example, display an error message or set a default value
+                    gender = "Not selected";
+                }
+
 
                 // Check for null or empty values
                 if (!string.IsNullOrEmpty(FirstName.TextValue) && !string.IsNullOrEmpty(signUpUsername) &&
                     !string.IsNullOrEmpty(signUpPassword) && !string.IsNullOrEmpty(signUpEmail))
                 {
-                    string query = "INSERT INTO user (name, username, password, email) VALUES (@name, @signUpUsername, @signUpPassword, @signUpEmail)";
+                    string query = "INSERT INTO patient (patient_name, age, gender, address, phone, email, username, password) " +
+                                   "VALUES (@name,@age, @gender, @address, @phone, @signUpEmail, @signUpUsername, @signUpPassword)";
                     if (signUpPassword == confirmPass.TextValue)
                     {
                         MySqlCommand command = new MySqlCommand(query, conn);
                         command.Parameters.AddWithValue("@name", name);
+                        command.Parameters.AddWithValue("@age", age);
+                        command.Parameters.AddWithValue("@gender", gender);
+                        command.Parameters.AddWithValue("@address", address);
+                        command.Parameters.AddWithValue("@phone", phone);
+                        command.Parameters.AddWithValue("@signUpEmail", signUpEmail);
                         command.Parameters.AddWithValue("@signUpUsername", signUpUsername);
                         command.Parameters.AddWithValue("@signUpPassword", signUpPassword);
-                        command.Parameters.AddWithValue("@signUpEmail", signUpEmail);
+                        
 
                         int rowsAffected = command.ExecuteNonQuery();
 
@@ -240,7 +280,7 @@ namespace HealthCare_System
 
         }
 
-        private void LoginSignupForm_Load(object sender, EventArgs e)
+        private void LoginUser_Load(object sender, EventArgs e)
         {
             MaximizeBox = false;
         }
@@ -302,7 +342,7 @@ namespace HealthCare_System
             if (randomCode == (textBox1.Text).ToString())
             {
                 to = textBox8.Text;
-                Recovery recovery = new Recovery();
+                RecoveryUser recovery = new RecoveryUser();
                 this.Hide();
                 recovery.Show();
             }
@@ -330,7 +370,7 @@ namespace HealthCare_System
 
         }
 
-        private void textBox8_TextChanged(object sender, EventArgs e)
+        private void panel4_Paint(object sender, PaintEventArgs e)
         {
 
         }

@@ -10,21 +10,17 @@ using System.Windows.Forms;
 
 namespace HealthCare_System
 {
-    public partial class customControl1 : UserControl
+    public partial class userHome : UserControl
     {
-        public customControl1()
+        public userHome()
         {
             InitializeComponent();
         }
 
-        private void label1_Click(object sender, EventArgs e)
+        public void UpdateLabel(string name)
         {
-
+            nameLbl.Text = name;
         }
-
-        private void label2_Click(object sender, EventArgs e)
-        {
-
-        }
+        
     }
 }

@@ -17,7 +17,7 @@ namespace HealthCare_System
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new LoginSignupForm());
+            Application.Run(new UserAdmin_Prompt());
 
         }
     }

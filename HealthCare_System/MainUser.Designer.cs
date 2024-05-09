@@ -1,6 +1,6 @@
 ﻿namespace HealthCare_System
 {
-    partial class MainForm
+    partial class MainUser
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainUser));
             this.panel1 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
@@ -40,10 +40,7 @@
             this.button4 = new System.Windows.Forms.Button();
             this.button7 = new System.Windows.Forms.Button();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
-            this.customControl11 = new HealthCare_System.customControl1();
-            this.customControl41 = new HealthCare_System.customControl4();
-            this.customControl31 = new HealthCare_System.customControl3();
-            this.customControl21 = new HealthCare_System.customControl2();
+            this.userHome1 = new HealthCare_System.userHome();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -51,7 +48,7 @@
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(176)))), ((int)(((byte)(186)))));
+            this.panel1.BackColor = System.Drawing.Color.SandyBrown;
             this.panel1.Location = new System.Drawing.Point(218, 0);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1058, 10);
@@ -93,7 +90,7 @@
             this.button8.ForeColor = System.Drawing.Color.White;
             this.button8.Image = ((System.Drawing.Image)(resources.GetObject("button8.Image")));
             this.button8.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button8.Location = new System.Drawing.Point(3, 167);
+            this.button8.Location = new System.Drawing.Point(0, 167);
             this.button8.Name = "button8";
             this.button8.Size = new System.Drawing.Size(219, 44);
             this.button8.TabIndex = 7;
@@ -193,38 +190,15 @@
             this.button7.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.button7.UseVisualStyleBackColor = false;
             // 
-            // customControl11
+            // userHome1
             // 
-            this.customControl11.Location = new System.Drawing.Point(219, 43);
-            this.customControl11.Name = "customControl11";
-            this.customControl11.Size = new System.Drawing.Size(1057, 584);
-            this.customControl11.TabIndex = 15;
+            this.userHome1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(249)))), ((int)(((byte)(240)))));
+            this.userHome1.Location = new System.Drawing.Point(219, 43);
+            this.userHome1.Name = "userHome1";
+            this.userHome1.Size = new System.Drawing.Size(1056, 584);
+            this.userHome1.TabIndex = 9;
             // 
-            // customControl41
-            // 
-            this.customControl41.BackColor = System.Drawing.Color.White;
-            this.customControl41.Location = new System.Drawing.Point(219, 43);
-            this.customControl41.Name = "customControl41";
-            this.customControl41.Size = new System.Drawing.Size(1057, 584);
-            this.customControl41.TabIndex = 16;
-            // 
-            // customControl31
-            // 
-            this.customControl31.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.customControl31.Location = new System.Drawing.Point(219, 43);
-            this.customControl31.Name = "customControl31";
-            this.customControl31.Size = new System.Drawing.Size(1057, 584);
-            this.customControl31.TabIndex = 14;
-            // 
-            // customControl21
-            // 
-            this.customControl21.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.customControl21.Location = new System.Drawing.Point(219, 43);
-            this.customControl21.Name = "customControl21";
-            this.customControl21.Size = new System.Drawing.Size(1057, 584);
-            this.customControl21.TabIndex = 13;
-            // 
-            // MainForm
+            // MainUser
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -234,15 +208,12 @@
             this.Controls.Add(this.button4);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.customControl11);
-            this.Controls.Add(this.customControl41);
-            this.Controls.Add(this.customControl31);
-            this.Controls.Add(this.customControl21);
+            this.Controls.Add(this.userHome1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "MainForm";
+            this.Name = "MainUser";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "MainForm";
-            this.Load += new System.EventHandler(this.MainForm_Load);
+            this.Text = "MainUser";
+            this.Load += new System.EventHandler(this.MainUser_Load);
             this.panel2.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
@@ -263,10 +234,7 @@
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Button button7;
         private System.ComponentModel.BackgroundWorker backgroundWorker1;
-        private customControl2 customControl21;
-        private customControl4 customControl41;
         private System.Windows.Forms.Button button8;
-        private customControl1 customControl11;
-        private customControl3 customControl31;
+        private userHome userHome1;
     }
 }

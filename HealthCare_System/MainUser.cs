@@ -4,34 +4,39 @@ using System.Windows.Forms;
 
 namespace HealthCare_System
 {
-    public partial class MainForm : Form
+    public partial class MainUser : Form
     {
+        private string userName;
         private Form loginForm;
         private UserAdmin_Prompt userAdminPrompt;
-        private customControl1 home;
+        private userHome home;
         private customControl2 dashboard;
         private customControl3 report;
         private customControl4 about;
+        private indivPatientInfo info;
 
-        public MainForm(UserAdmin_Prompt userAdminPrompt, Form loginForm)
+        public MainUser(UserAdmin_Prompt userAdminPrompt, Form loginForm, string name)
         {
             InitializeComponent();
             /*this.userAdminPrompt = userAdminPrompt;*/
             this.loginForm = loginForm;
-
+            userName = name;
+            userHome1.UpdateLabel(userName);
+            info = new indivPatientInfo();
+            info.UpdateLabel(userName);
             //sidePanel.Height = button1.Height;
 
             //customControl1.BringToFront();
         }
 
-        private void MainForm_Load(object sender, EventArgs e)
+        private void MainUser_Load(object sender, EventArgs e)
         {
             // Subscribe to the FormClosing event
-            this.FormClosing += MainForm_FormClosing;
+            this.FormClosing += MainUser_FormClosing;
         }
 
         // Event handler for FormClosing event
-        private void MainForm_FormClosing(object sender, FormClosingEventArgs e)
+        private void MainUser_FormClosing(object sender, FormClosingEventArgs e)
         {
             // Ensure that the user wants to exit
             DialogResult result = MessageBox.Show("Are you sure you want to exit?", "Confirm Exit", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
@@ -42,7 +47,7 @@ namespace HealthCare_System
             else
             {
                 // Unsubscribe from the FormClosing event to prevent multiple dialogs
-                this.FormClosing -= MainForm_FormClosing;
+                this.FormClosing -= MainUser_FormClosing;
 
                 Application.Exit(); // Close the entire application
             }
@@ -76,7 +81,7 @@ namespace HealthCare_System
             button8.ForeColor = Color.White;
 
             //button6.ForeColor = Color.DarkSlateGray;
-            ////button2.ForeColor = Color.White;
+            //button2.ForeColor = Color.White;
             //button5.ForeColor = Color.White;
             button1.ForeColor = Color.White;
 
@@ -139,7 +144,7 @@ namespace HealthCare_System
         private void button1_Click_1(object sender, EventArgs e)
         {
             button1.BackColor = Color.White;
-            //button2.BackColor = Color.FromArgb(36, 176, 186); ;
+            //button2.BackColor = Color.DarkSlateGray;
             //button5.BackColor = Color.DarkSlateGray;
             //button6.BackColor = Color.DarkSlateGray;
             button8.BackColor = Color.DarkSlateGray;
@@ -151,19 +156,26 @@ namespace HealthCare_System
             //button5.ForeColor = Color.White;
             //button6.ForeColor = Color.White;
 
-            home = new customControl1();
-            Controls.Add(home);
-            home.Location = new Point(221, 40);
-            home.BringToFront();
-
-            // Disable other controls
+            if (home == null) // Check if userHome control is not yet created
+            {
+                home = new userHome();
+                home.UpdateLabel(userName);
+                Controls.Add(home);
+                home.Location = new Point(221, 40);
+            }
+            else
+            {
+                home.BringToFront(); 
+            }
+            /*// Disable other controls
             if (dashboard != null)
                 dashboard.Enabled = false;
             if (report != null)
                 report.Enabled = false;
             if (about != null)
                 about.Enabled = false;
-
+            if (info != null)
+                info.Enabled = false;*/
         }
 
         private void button4_Click(object sender, EventArgs e)
@@ -228,18 +240,30 @@ namespace HealthCare_System
             //button5.ForeColor = Color.White;
             //button6.ForeColor = Color.White;
 
-            Patient rentalfrm = new Patient();
-            Controls.Add(rentalfrm);
-            rentalfrm.Location = new Point(221, 40);
-            rentalfrm.BringToFront();
+            if (home == null) // Check if userHome control is not yet created
+            {
+                info.UpdateLabel(userName);
+                info.RetrieveHealthRecords(userName);
+                Controls.Add(info);
+                info.Location = new Point(221, 40);
+                info.BringToFront();
+            }
+            else
+            {
+                info.BringToFront();
+            }
 
-            // Disable other controls
+            
+
+           /* // Disable other controls
             if (dashboard != null)
                 dashboard.Enabled = false;
             if (report != null)
                 report.Enabled = false;
             if (about != null)
                 about.Enabled = false;
+            if (home != null)
+                home.Enabled = false;*/
         }
 
         private void button3_Click(object sender, EventArgs e)

@@ -12,11 +12,11 @@ using static System.Windows.Forms.VisualStyles.VisualStyleElement.Button;
 
 namespace HealthCare_System
 {
-    public partial class Recovery : Form
+    public partial class RecoveryUser : Form
     {
         private MySqlConnection conn;
         string email = LoginSignupForm.to;
-        public Recovery()
+        public RecoveryUser()
         {
             InitializeComponent();
             conn = DatabaseConnection.GetConnection();
@@ -42,7 +42,7 @@ namespace HealthCare_System
                         conn.Open();
                     }
 
-                    string query = "UPDATE `healthcare_db`.`user` SET `password` = @password WHERE `email` = @email";
+                    string query = "UPDATE `healthcare_db`.`patient` SET `password` = @password WHERE `email` = @email";
 
                         MySqlCommand command = new MySqlCommand(query, conn);
                         command.Parameters.AddWithValue("@password", newPassword);
@@ -70,7 +70,7 @@ namespace HealthCare_System
                 MessageBox.Show("Passwords do not match!", "Failed", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
             }
 
-            LoginSignupForm loginfrm = new LoginSignupForm();
+            LoginUser loginfrm = new LoginUser();
             this.Hide();
             loginfrm.Show();
         }
@@ -86,6 +86,7 @@ namespace HealthCare_System
             {
                 UserAdmin_Prompt prompt = new UserAdmin_Prompt();
                 prompt.Show();
+
             }
         }
 
