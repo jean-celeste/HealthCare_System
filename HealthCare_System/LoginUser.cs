@@ -12,6 +12,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using MySql.Data.MySqlClient;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.Button;
 
 namespace HealthCare_System
 {
@@ -177,24 +178,57 @@ namespace HealthCare_System
             {
                 conn.Open();
 
+
                 // Retrieve text values from custom controls
                 string name = FirstName.TextValue + " " + LastName.TextValue;
+                string age = Age.TextValue;
+                string address = Address.TextValue;
+                string gender = "";
+                string phone = Phone.TextValue;
                 string signUpUsername = username.TextValue;
                 string signUpPassword = password.TextValue;
                 string signUpEmail = email.TextValue;
+
+                
+
+                if (radioButton1.Checked)
+                {
+                    gender = "Male";
+                }
+                else if (radioButton2.Checked)
+                {
+                    gender = "Female";
+                }
+                else if (radioButton3.Checked)
+                {
+                    gender = "Pefer Not to Say";
+                }
+                else
+                {
+                    // None of the radio buttons are checked, handle this case accordingly
+                    // For example, display an error message or set a default value
+                    gender = "Not selected";
+                }
+
 
                 // Check for null or empty values
                 if (!string.IsNullOrEmpty(FirstName.TextValue) && !string.IsNullOrEmpty(signUpUsername) &&
                     !string.IsNullOrEmpty(signUpPassword) && !string.IsNullOrEmpty(signUpEmail))
                 {
-                    string query = "INSERT INTO user (name, username, password, email) VALUES (@name, @signUpUsername, @signUpPassword, @signUpEmail)";
+                    string query = "INSERT INTO patient (patient_name, age, gender, address, phone, email, username, password) " +
+                                   "VALUES (@name,@age, @gender, @address, @phone, @signUpEmail, @signUpUsername, @signUpPassword)";
                     if (signUpPassword == confirmPass.TextValue)
                     {
                         MySqlCommand command = new MySqlCommand(query, conn);
                         command.Parameters.AddWithValue("@name", name);
+                        command.Parameters.AddWithValue("@age", age);
+                        command.Parameters.AddWithValue("@gender", gender);
+                        command.Parameters.AddWithValue("@address", address);
+                        command.Parameters.AddWithValue("@phone", phone);
+                        command.Parameters.AddWithValue("@signUpEmail", signUpEmail);
                         command.Parameters.AddWithValue("@signUpUsername", signUpUsername);
                         command.Parameters.AddWithValue("@signUpPassword", signUpPassword);
-                        command.Parameters.AddWithValue("@signUpEmail", signUpEmail);
+                        
 
                         int rowsAffected = command.ExecuteNonQuery();
 
@@ -308,6 +342,11 @@ namespace HealthCare_System
         }
 
         private void confirmPass_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panel4_Paint(object sender, PaintEventArgs e)
         {
 
         }
