@@ -6,16 +6,18 @@ namespace HealthCare_System
 {
     public partial class MainForm : Form
     {
-        private LoginSignupForm loginSignupForm;
+        private Form loginForm;
+        private UserAdmin_Prompt userAdminPrompt;
         private customControl1 home;
         private customControl2 dashboard;
         private customControl3 report;
         private customControl4 about;
 
-        public MainForm(LoginSignupForm loginSignupForm)
+        public MainForm(UserAdmin_Prompt userAdminPrompt, Form loginForm)
         {
             InitializeComponent();
-            this.loginSignupForm = loginSignupForm;
+            /*this.userAdminPrompt = userAdminPrompt;*/
+            this.loginForm = loginForm;
 
             //sidePanel.Height = button1.Height;
 

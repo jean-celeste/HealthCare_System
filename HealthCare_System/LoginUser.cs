@@ -15,7 +15,7 @@ using MySql.Data.MySqlClient;
 
 namespace HealthCare_System
 {
-    public partial class LoginSignupForm : Form
+    public partial class LoginUser : Form
     {
         //private DatabaseConnection dbConn;
         //Connection String
@@ -23,7 +23,7 @@ namespace HealthCare_System
 
 
 
-        public LoginSignupForm()
+        public LoginUser()
         {
             InitializeComponent();
            // this.dbConn = dbConn;
@@ -57,7 +57,7 @@ namespace HealthCare_System
 
         private void button2_Click(object sender, EventArgs e)
         {
-            /*MySqlConnection conn = DatabaseConnection.GetConnection(); // Obtain the connection object
+            MySqlConnection conn = DatabaseConnection.GetConnection(); // Obtain the connection object
 
             try
             {
@@ -81,7 +81,7 @@ namespace HealthCare_System
                     {
                         // User credentials are correct
                         MessageBox.Show("Login successful!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        MainForm main = new MainForm(this);
+                        MainForm main = new MainForm(userAdminPromptInstance, this);
                         main.Show();
                         this.Hide();
                     }
@@ -105,10 +105,10 @@ namespace HealthCare_System
             finally
             {
                 conn.Close(); // Close the connection
-            }*/
-            MainForm main = new MainForm(userAdminPromptInstance, this);
+            }
+            /*MainForm main = new MainForm(this);
             main.Show();
-            this.Hide();
+            this.Hide();*/
 
 
 
@@ -235,7 +235,7 @@ namespace HealthCare_System
 
         }
 
-        private void LoginSignupForm_Load(object sender, EventArgs e)
+        private void LoginUser_Load(object sender, EventArgs e)
         {
             MaximizeBox = false;
         }
