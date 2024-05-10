@@ -28,20 +28,17 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
             this.label1 = new System.Windows.Forms.Label();
             this.cust_name = new System.Windows.Forms.TextBox();
             this.cust_email = new System.Windows.Forms.MaskedTextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.cust_phone = new System.Windows.Forms.MaskedTextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.cust_address = new System.Windows.Forms.MaskedTextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
-            this.saveBtn = new System.Windows.Forms.Button();
             this.updateBtn = new System.Windows.Forms.Button();
             this.deleteBtn = new System.Windows.Forms.Button();
             this.cust_search = new System.Windows.Forms.TextBox();
@@ -59,7 +56,10 @@
             this.patientEmail = new System.Windows.Forms.MaskedTextBox();
             this.viewBtn = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.label4 = new System.Windows.Forms.Label();
+            this.cust_phone = new System.Windows.Forms.MaskedTextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // label1
@@ -104,27 +104,9 @@
             this.label2.Font = new System.Drawing.Font("Montserrat", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(28, 156);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(48, 18);
+            this.label2.Size = new System.Drawing.Size(37, 18);
             this.label2.TabIndex = 6;
-            this.label2.Text = "Email:";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Montserrat", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(28, 212);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(54, 18);
-            this.label4.TabIndex = 8;
-            this.label4.Text = "Phone:";
-            this.label4.Click += new System.EventHandler(this.label4_Click);
-            // 
-            // cust_phone
-            // 
-            this.cust_phone.Location = new System.Drawing.Point(31, 233);
-            this.cust_phone.Name = "cust_phone";
-            this.cust_phone.Size = new System.Drawing.Size(217, 20);
-            this.cust_phone.TabIndex = 7;
+            this.label2.Text = "Age:";
             // 
             // label5
             // 
@@ -164,22 +146,6 @@
             this.label7.TabIndex = 15;
             this.label7.Text = "Email";
             // 
-            // saveBtn
-            // 
-            this.saveBtn.BackColor = System.Drawing.Color.SandyBrown;
-            this.saveBtn.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.saveBtn.FlatAppearance.BorderSize = 0;
-            this.saveBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.saveBtn.Font = new System.Drawing.Font("Montserrat", 9.749999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.saveBtn.ForeColor = System.Drawing.Color.White;
-            this.saveBtn.Location = new System.Drawing.Point(31, 460);
-            this.saveBtn.Name = "saveBtn";
-            this.saveBtn.Size = new System.Drawing.Size(107, 31);
-            this.saveBtn.TabIndex = 16;
-            this.saveBtn.Text = "Add";
-            this.saveBtn.UseVisualStyleBackColor = false;
-            this.saveBtn.Click += new System.EventHandler(this.saveBtn_Click);
-            // 
             // updateBtn
             // 
             this.updateBtn.BackColor = System.Drawing.Color.DarkSlateGray;
@@ -188,7 +154,7 @@
             this.updateBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.updateBtn.Font = new System.Drawing.Font("Montserrat", 9.749999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.updateBtn.ForeColor = System.Drawing.Color.White;
-            this.updateBtn.Location = new System.Drawing.Point(144, 460);
+            this.updateBtn.Location = new System.Drawing.Point(31, 497);
             this.updateBtn.Name = "updateBtn";
             this.updateBtn.Size = new System.Drawing.Size(104, 31);
             this.updateBtn.TabIndex = 17;
@@ -204,9 +170,9 @@
             this.deleteBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.deleteBtn.Font = new System.Drawing.Font("Montserrat", 9.749999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.deleteBtn.ForeColor = System.Drawing.Color.White;
-            this.deleteBtn.Location = new System.Drawing.Point(172, 497);
+            this.deleteBtn.Location = new System.Drawing.Point(144, 497);
             this.deleteBtn.Name = "deleteBtn";
-            this.deleteBtn.Size = new System.Drawing.Size(76, 31);
+            this.deleteBtn.Size = new System.Drawing.Size(104, 31);
             this.deleteBtn.TabIndex = 18;
             this.deleteBtn.Text = "Delete";
             this.deleteBtn.UseVisualStyleBackColor = false;
@@ -243,14 +209,14 @@
             this.Column4,
             this.Column6,
             this.Column5});
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle6.BackColor = System.Drawing.Color.DarkSlateGray;
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Montserrat", 8.249999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.SandyBrown;
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridView1.DefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle12.BackColor = System.Drawing.Color.DarkSlateGray;
+            dataGridViewCellStyle12.Font = new System.Drawing.Font("Montserrat", 8.249999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle12.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle12.SelectionBackColor = System.Drawing.Color.SandyBrown;
+            dataGridViewCellStyle12.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle12.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridView1.DefaultCellStyle = dataGridViewCellStyle12;
             this.dataGridView1.Location = new System.Drawing.Point(271, 56);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
@@ -263,8 +229,8 @@
             // Column0
             // 
             this.Column0.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.Column0.DefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.Column0.DefaultCellStyle = dataGridViewCellStyle11;
             this.Column0.HeaderText = "patient_id";
             this.Column0.Name = "Column0";
             this.Column0.ReadOnly = true;
@@ -335,6 +301,7 @@
             this.patientPhone.Name = "patientPhone";
             this.patientPhone.Size = new System.Drawing.Size(217, 20);
             this.patientPhone.TabIndex = 33;
+            this.patientPhone.MaskInputRejected += new System.Windows.Forms.MaskInputRejectedEventHandler(this.patientPhone_MaskInputRejected);
             // 
             // patientEmail
             // 
@@ -351,9 +318,9 @@
             this.viewBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.viewBtn.Font = new System.Drawing.Font("Montserrat", 9.749999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.viewBtn.ForeColor = System.Drawing.Color.White;
-            this.viewBtn.Location = new System.Drawing.Point(31, 497);
+            this.viewBtn.Location = new System.Drawing.Point(31, 460);
             this.viewBtn.Name = "viewBtn";
-            this.viewBtn.Size = new System.Drawing.Size(135, 31);
+            this.viewBtn.Size = new System.Drawing.Size(217, 31);
             this.viewBtn.TabIndex = 35;
             this.viewBtn.Text = "View Health Info";
             this.viewBtn.UseVisualStyleBackColor = false;
@@ -361,6 +328,8 @@
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.viewBtn);
+            this.panel1.Controls.Add(this.updateBtn);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
@@ -368,11 +337,28 @@
             this.panel1.TabIndex = 0;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Montserrat", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(28, 212);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(60, 18);
+            this.label4.TabIndex = 8;
+            this.label4.Text = "Gender:";
+            this.label4.Click += new System.EventHandler(this.label4_Click);
+            // 
+            // cust_phone
+            // 
+            this.cust_phone.Location = new System.Drawing.Point(31, 233);
+            this.cust_phone.Name = "cust_phone";
+            this.cust_phone.Size = new System.Drawing.Size(217, 20);
+            this.cust_phone.TabIndex = 7;
+            // 
             // Patient
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.viewBtn);
             this.Controls.Add(this.patientEmail);
             this.Controls.Add(this.patientPhone);
             this.Controls.Add(this.label11);
@@ -380,8 +366,6 @@
             this.Controls.Add(this.label8);
             this.Controls.Add(this.cust_search);
             this.Controls.Add(this.deleteBtn);
-            this.Controls.Add(this.updateBtn);
-            this.Controls.Add(this.saveBtn);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
@@ -399,6 +383,7 @@
             this.Load += new System.EventHandler(this.Rental_Load);
             this.Click += new System.EventHandler(this.Rental_Click);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -411,13 +396,10 @@
         private System.Windows.Forms.MaskedTextBox cust_email;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.MaskedTextBox cust_phone;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.MaskedTextBox cust_address;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Button saveBtn;
         private System.Windows.Forms.Button updateBtn;
         private System.Windows.Forms.Button deleteBtn;
         private System.Windows.Forms.TextBox cust_search;
@@ -435,5 +417,7 @@
         private System.Windows.Forms.MaskedTextBox patientEmail;
         private System.Windows.Forms.Button viewBtn;
         private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.MaskedTextBox cust_phone;
     }
 }

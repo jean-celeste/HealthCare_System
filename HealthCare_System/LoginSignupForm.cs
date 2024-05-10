@@ -164,13 +164,13 @@ namespace HealthCare_System
         {
             loginPanel.BringToFront();
             goToLoginBtn.BackColor = select_color;
-            signUpBtn.BackColor = Color.DarkSlateGray;
+            //signUpBtn.BackColor = Color.DarkSlateGray;
         }
 
         private void signUpBtn_Click(object sender, EventArgs e)
         {
             signUpPanel.BringToFront();
-            signUpBtn.BackColor = select_color;
+            //signUpBtn.BackColor = select_color;
             goToLoginBtn.BackColor = Color.DarkSlateGray;
         }
 

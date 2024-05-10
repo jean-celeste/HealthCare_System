@@ -9,6 +9,7 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Transactions;
 using System.Windows.Forms;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.ListView;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
@@ -110,70 +111,14 @@ namespace HealthCare_System
             patientEmail.Clear();
         }
 
-        private void saveBtn_Click(object sender, EventArgs e)
-        {
-            /*
-                if (string.IsNullOrEmpty(cust_name.Text) || string.IsNullOrEmpty(cust_email.Text) || string.IsNullOrEmpty(cust_phone.Text) ||
-                    string.IsNullOrEmpty(cust_address.Text) || string.IsNullOrEmpty(book.Text) || string.IsNullOrEmpty(date.Text))
-                {
-                    MessageBox.Show("Warning: All fields are Required!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                    return;
-                }
-                else
-                {
-                    try
-                    {
-                        if (conn.State != ConnectionState.Open)
-                        {
-                            conn.Open();
-                        }
-
-                    string query = "INSERT INTO `books_db`.`customers` " +
-                                       "(`customer_name`, `email`, `phone`, `address`, `borrowed_books`, `date_borrowed`, `paid`, `returned`) " +
-                                       "VALUES (@name, @email, @phone, @address, @borrowed_book, @date_borrowed, @paid, @returned)";
-
-                        MySqlCommand command = new MySqlCommand(query, conn);
-                        command.Parameters.AddWithValue("@name", cust_name.Text);
-                        command.Parameters.AddWithValue("@email", cust_email.Text);
-                        command.Parameters.AddWithValue("@phone", cust_phone.Text);
-                        command.Parameters.AddWithValue("@address", cust_address.Text);
-                        command.Parameters.AddWithValue("@borrowed_book", book.Text);
-                        command.Parameters.AddWithValue("@date_borrowed", date.Value.ToString("yyyy-MM-dd HH:mm:ss"));
-                        command.Parameters.AddWithValue("@paid", radioButton1.Checked ? "Yes" : "No");
-                        command.Parameters.AddWithValue("@returned", radioButton6.Checked ? "Yes" : "No");
-
-                    int rowsAffected = command.ExecuteNonQuery();
-
-                        if (rowsAffected > 0)
-                        {
-                            MessageBox.Show("Successfully Recorded!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        }
-                        else
-                        {
-                            MessageBox.Show("There is an Error Saving!", "Failed", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-                        }
-                    }
-                    catch (Exception ex)
-                    {
-                        MessageBox.Show("Error: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    }
-                    finally
-                    {
-                        LoadData(); // Load data after the operation
-                        conn.Close(); // Close the connection
-                        clear();
-                    }
-                }
-            
-            */
-        }
+        
         private void dataGridView1_SelectionChanged(object sender, EventArgs e)
         {
             
             // Check if there is at least one row selected
             if (dataGridView1.SelectedRows.Count > 0)
             {
-                saveBtn.Enabled = false;
+                //saveBtn.Enabled = false;
                 updateBtn.Enabled = true;
                 deleteBtn.Enabled = true;
                 // Get the selected row
@@ -231,7 +176,7 @@ namespace HealthCare_System
             }
             else
             {
-                saveBtn.Enabled = true;
+                //saveBtn.Enabled = true;
                 updateBtn.Enabled = false;
                 deleteBtn.Enabled = false;
             }
@@ -240,8 +185,7 @@ namespace HealthCare_System
         private void udpateBtn_Click(object sender, EventArgs e)
         {
             // Get the selected customer_id from the DataGridView
-            string customer_id = dataGridView1.CurrentRow.Cells["Column0"].Value.ToString();
-
+            string patient_id = dataGridView1.CurrentRow.Cells["Column0"].Value.ToString();
 
             try
             {
@@ -250,27 +194,23 @@ namespace HealthCare_System
                     conn.Open();
                 }
 
-                string query = "UPDATE `books_db`.`customers`" +
-                               " SET `customer_name` = @name," +
-                               " `email` = @email," +
-                               " `phone` = @phone," +
+                string query = "UPDATE `healthcare_db`.`patient`" +
+                               " SET `patient_name` = @patient_name," +
+                               " `age` = @age," +
+                               " `gender` = @gender," +
                                " `address` = @address," +
-                               " `borrowed_books` = @borrowed_book," +
-                               " `date_borrowed` = @date_borrowed," +
-                               " `paid` = @paid," +
-                               " `returned` = @returned" +
-                               " WHERE `customer_id` = @customer_id"; // Use parameter for customer_id
+                               " `phone` = @phone," +
+                               " `email` = @email" +
+                               " WHERE `patient_id` = @patient_id"; // Use parameter for customer_id
 
                 MySqlCommand command = new MySqlCommand(query, conn);
-                command.Parameters.AddWithValue("@customer_id", customer_id); // Add parameter for customer_id
-                command.Parameters.AddWithValue("@name", cust_name.Text);
-                command.Parameters.AddWithValue("@email", cust_email.Text);
-                command.Parameters.AddWithValue("@phone", cust_phone.Text);
+                command.Parameters.AddWithValue("@patient_id", patient_id);
+                command.Parameters.AddWithValue("@patient_name", cust_name.Text);
+                command.Parameters.AddWithValue("@age", cust_email.Text);
+                command.Parameters.AddWithValue("@gender", cust_phone.Text);
                 command.Parameters.AddWithValue("@address", cust_address.Text);
-                /*command.Parameters.AddWithValue("@borrowed_book", book.Text);
-                command.Parameters.AddWithValue("@date_borrowed", date.Value.ToString("yyyy-MM-dd HH:mm:ss")); ;
-                command.Parameters.AddWithValue("@paid", radioButton1.Checked ? "Yes" : "No");
-                command.Parameters.AddWithValue("@returned", radioButton6.Checked ? "Yes" : "No");*/
+                command.Parameters.AddWithValue("@phone", patientPhone.Text);
+                command.Parameters.AddWithValue("@email", patientEmail.Text);
 
                 int rowsAffected = command.ExecuteNonQuery();
 
@@ -295,9 +235,10 @@ namespace HealthCare_System
             }
         }
 
+
         private void cancelBtn_Click(object sender, EventArgs e)
         {
-/*            string customer_id = dataGridView1.CurrentRow.Cells["Column0"].Value.ToString();
+            string patient_id = dataGridView1.CurrentRow.Cells["Column0"].Value.ToString();
             try
             {
                 if (conn.State != ConnectionState.Open)
@@ -305,23 +246,40 @@ namespace HealthCare_System
                     conn.Open();
                 }
 
-                string query = "DELETE FROM `books_db`.`customers`" +
-                               " WHERE `customer_id` = @customer_id"; // Use parameter for customer_id
-
-                MySqlCommand command = new MySqlCommand(query, conn);
-                command.Parameters.AddWithValue("@customer_id", customer_id); // Add parameter value
-
-
-
-                int rowsAffected = command.ExecuteNonQuery();
-
-                if (rowsAffected > 0)
+                using (MySqlTransaction transaction = conn.BeginTransaction())
                 {
-                    MessageBox.Show("Record successfully deleted!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                }
-                else
-                {
-                    MessageBox.Show("No records were deleted!", "Failed", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                    try
+                    {
+                        // Delete health records associated with the patient
+                        string healthRecordQuery = "DELETE FROM `healthcare_db`.`health_records` WHERE `patient_id` = @patient_id";
+                        MySqlCommand healthRecordCommand = new MySqlCommand(healthRecordQuery, conn, transaction);
+                        healthRecordCommand.Parameters.AddWithValue("@patient_id", patient_id);
+                        int healthRecordRowsAffected = healthRecordCommand.ExecuteNonQuery();
+
+                        // Delete the patient record
+                        string patientQuery = "DELETE FROM `healthcare_db`.`patient` WHERE `patient_id` = @patient_id";
+                        MySqlCommand patientCommand = new MySqlCommand(patientQuery, conn, transaction);
+                        patientCommand.Parameters.AddWithValue("@patient_id", patient_id);
+                        int patientRowsAffected = patientCommand.ExecuteNonQuery();
+
+                        // Commit the transaction if both delete operations are successful
+                        transaction.Commit();
+
+                        if (healthRecordRowsAffected > 0 && patientRowsAffected > 0)
+                        {
+                            MessageBox.Show("Patient record and associated health records successfully deleted!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        }
+                        else
+                        {
+                            MessageBox.Show("No records were deleted!", "Failed", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                        }
+                    }
+                    catch (Exception ex)
+                    {
+                        // Rollback the transaction if an error occurs
+                        transaction.Rollback();
+                        MessageBox.Show("Error: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
                 }
             }
             catch (Exception ex)
@@ -333,12 +291,12 @@ namespace HealthCare_System
                 LoadData(); // Reload data after the operation
                 conn.Close(); // Close the connection
                 clear(); // Clear the form fields
-            }*/
+            }
         }
 
         private void cust_search_TextChanged(object sender, EventArgs e)
         {
-            /*// Clear the DataGridView before adding new rows
+            // Clear the DataGridView before adding new rows
             dataGridView1.Rows.Clear();
 
             // Check if the connection is not open, then open it
@@ -351,11 +309,9 @@ namespace HealthCare_System
             string searchPattern = cust_search.Text;
 
             // Construct the SQL query with parameterized search pattern
-            string query = "SELECT * FROM books_db.customers " +
-                            "WHERE customer_id LIKE @searchPattern OR " +
-                            "customer_name LIKE @searchPattern OR " +
-                            "email LIKE @searchPattern OR " +
-                            "phone LIKE @searchPattern OR " +
+            string query = "SELECT * FROM healthcare_db.patient " +
+                            "WHERE patient_id LIKE @searchPattern OR " +
+                            "patient_name LIKE @searchPattern OR " +
                             "address LIKE @searchPattern";
             MySqlCommand command = new MySqlCommand(query, conn);
             command.Parameters.AddWithValue("@searchPattern", "%" + searchPattern + "%");
@@ -373,15 +329,14 @@ namespace HealthCare_System
             foreach (DataRow row in dataTable.Rows)
             {
                 dataGridView1.Rows.Add(
-                    row["customer_id"].ToString(),
-                    row["customer_name"].ToString(),
-                    row["email"].ToString(),
-                    row["phone"].ToString(),
+                    row["patient_id"].ToString(),
+                    row["patient_name"].ToString(),
+                    row["age"].ToString(),
+                    row["gender"].ToString(),
                     row["address"].ToString(),
-                    row["borrowed_books"].ToString(),
-                    row["date_borrowed"].ToString(),
-                    row["paid"].ToString(),
-                    row["returned"].ToString()
+                    row["phone"].ToString(),
+                    row["email"].ToString()
+                    
                 );
             }
 
@@ -389,7 +344,7 @@ namespace HealthCare_System
             clear();
 
             // Close the connection
-            conn.Close()*/;
+            conn.Close();
         }
 
 
@@ -428,6 +383,11 @@ namespace HealthCare_System
         }
 
         private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void patientPhone_MaskInputRejected(object sender, MaskInputRejectedEventArgs e)
         {
 
         }

@@ -34,9 +34,12 @@ namespace HealthCare_System
             // Create a DataTable to hold the data
             DataTable dataTable = new DataTable();
 
-            string query = @"SELECT * FROM patients WHERE patient_id = @patient_id";
+            string query = @"SELECT * FROM patient WHERE patient_id = @patient_id";
 
             MySqlCommand command = new MySqlCommand(query, conn);
+
+            // Define and add the @patient_id parameter
+            command.Parameters.AddWithValue("@patient_id", patientId);
 
             using (MySqlDataReader reader = command.ExecuteReader())
             {
@@ -56,7 +59,10 @@ namespace HealthCare_System
                     famHist.Text = reader["fam_hist"].ToString();
                 }
             }
+
+            conn.Close(); // Close the connection after loading data
         }
+
         public void LoadData(string patient_id)
         {
             patientId = patient_id;
