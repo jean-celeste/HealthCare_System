@@ -669,7 +669,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "LoginUser";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Library Management System";
+            this.Text = "iCare User Login/Signup";
             this.Load += new System.EventHandler(this.LoginUser_Load);
             this.loginPanel.ResumeLayout(false);
             this.loginPanel.PerformLayout();

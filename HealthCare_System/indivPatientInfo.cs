@@ -40,8 +40,8 @@ namespace HealthCare_System
                 MySqlCommand command = new MySqlCommand(query, conn);
                 command.Parameters.AddWithValue("@userName", userName);
                 string patientId = command.ExecuteScalar()?.ToString();
-                
 
+                patientIDTxt.Text = "Patient ID: " + patientId;
 
                 if (!string.IsNullOrEmpty(patientId))
                 {
@@ -54,7 +54,7 @@ namespace HealthCare_System
                     {
                         if (reader.Read())
                         {
-                            patientIDTxt.Text = "Patient ID: " + patientId;
+                            
                             recordIDtxt.Text = reader["record_id"].ToString();
                             hospNumTxt.Text = reader["hospital_num"].ToString();
                             roomNumTxt.Text = reader["room_num"].ToString();

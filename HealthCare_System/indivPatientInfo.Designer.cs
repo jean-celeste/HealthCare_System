@@ -46,31 +46,31 @@
             this.pictureBox18 = new System.Windows.Forms.PictureBox();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.panel7 = new System.Windows.Forms.Panel();
+            this.medHist = new System.Windows.Forms.TextBox();
+            this.label8 = new System.Windows.Forms.Label();
             this.panel9 = new System.Windows.Forms.Panel();
+            this.label10 = new System.Windows.Forms.Label();
             this.panel5 = new System.Windows.Forms.Panel();
+            this.label7 = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
+            this.treatmentTxt = new System.Windows.Forms.TextBox();
+            this.label6 = new System.Windows.Forms.Label();
             this.pictureBox15 = new System.Windows.Forms.PictureBox();
             this.panel8 = new System.Windows.Forms.Panel();
+            this.famHist = new System.Windows.Forms.TextBox();
+            this.label9 = new System.Windows.Forms.Label();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.panel6 = new System.Windows.Forms.Panel();
+            this.label4 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.label2 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.label3 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel10 = new System.Windows.Forms.Panel();
-            this.patientIDTxt = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
-            this.treatmentTxt = new System.Windows.Forms.TextBox();
-            this.medHist = new System.Windows.Forms.TextBox();
-            this.famHist = new System.Windows.Forms.TextBox();
             this.medTxt = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.patientIDTxt = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
@@ -108,11 +108,11 @@
             this.recordIDtxt.AutoSize = true;
             this.recordIDtxt.Font = new System.Drawing.Font("Montserrat", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.recordIDtxt.ForeColor = System.Drawing.Color.White;
-            this.recordIDtxt.Location = new System.Drawing.Point(23, 32);
+            this.recordIDtxt.Location = new System.Drawing.Point(12, 32);
             this.recordIDtxt.Name = "recordIDtxt";
-            this.recordIDtxt.Size = new System.Drawing.Size(114, 29);
+            this.recordIDtxt.Size = new System.Drawing.Size(102, 29);
             this.recordIDtxt.TabIndex = 2;
-            this.recordIDtxt.Text = "patientId";
+            this.recordIDtxt.Text = "No Data";
             // 
             // recordlabel
             // 
@@ -140,11 +140,11 @@
             this.hospNumTxt.AutoSize = true;
             this.hospNumTxt.Font = new System.Drawing.Font("Montserrat", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.hospNumTxt.ForeColor = System.Drawing.Color.White;
-            this.hospNumTxt.Location = new System.Drawing.Point(31, 28);
+            this.hospNumTxt.Location = new System.Drawing.Point(19, 32);
             this.hospNumTxt.Name = "hospNumTxt";
-            this.hospNumTxt.Size = new System.Drawing.Size(77, 29);
+            this.hospNumTxt.Size = new System.Drawing.Size(102, 29);
             this.hospNumTxt.TabIndex = 12;
-            this.hospNumTxt.Text = "label3";
+            this.hospNumTxt.Text = "No Data";
             // 
             // roomNumTxt
             // 
@@ -153,9 +153,9 @@
             this.roomNumTxt.ForeColor = System.Drawing.Color.White;
             this.roomNumTxt.Location = new System.Drawing.Point(29, 32);
             this.roomNumTxt.Name = "roomNumTxt";
-            this.roomNumTxt.Size = new System.Drawing.Size(77, 29);
+            this.roomNumTxt.Size = new System.Drawing.Size(102, 29);
             this.roomNumTxt.TabIndex = 11;
-            this.roomNumTxt.Text = "label3";
+            this.roomNumTxt.Text = "No Data";
             // 
             // pictureBox3
             // 
@@ -172,11 +172,11 @@
             this.diagTxt.AutoSize = true;
             this.diagTxt.Font = new System.Drawing.Font("Montserrat", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.diagTxt.ForeColor = System.Drawing.Color.White;
-            this.diagTxt.Location = new System.Drawing.Point(21, 40);
+            this.diagTxt.Location = new System.Drawing.Point(12, 30);
             this.diagTxt.Name = "diagTxt";
-            this.diagTxt.Size = new System.Drawing.Size(72, 26);
+            this.diagTxt.Size = new System.Drawing.Size(92, 26);
             this.diagTxt.TabIndex = 12;
-            this.diagTxt.Text = "label3";
+            this.diagTxt.Text = "No Data";
             // 
             // pictureBox6
             // 
@@ -193,11 +193,11 @@
             this.allergyTxt.AutoSize = true;
             this.allergyTxt.Font = new System.Drawing.Font("Montserrat", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.allergyTxt.ForeColor = System.Drawing.Color.White;
-            this.allergyTxt.Location = new System.Drawing.Point(22, 40);
+            this.allergyTxt.Location = new System.Drawing.Point(12, 33);
             this.allergyTxt.Name = "allergyTxt";
-            this.allergyTxt.Size = new System.Drawing.Size(72, 26);
+            this.allergyTxt.Size = new System.Drawing.Size(92, 26);
             this.allergyTxt.TabIndex = 16;
-            this.allergyTxt.Text = "label3";
+            this.allergyTxt.Text = "No Data";
             // 
             // pictureBox9
             // 
@@ -214,11 +214,11 @@
             this.dateTxt.AutoSize = true;
             this.dateTxt.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dateTxt.ForeColor = System.Drawing.Color.White;
-            this.dateTxt.Location = new System.Drawing.Point(23, 39);
+            this.dateTxt.Location = new System.Drawing.Point(13, 40);
             this.dateTxt.Name = "dateTxt";
-            this.dateTxt.Size = new System.Drawing.Size(60, 22);
+            this.dateTxt.Size = new System.Drawing.Size(78, 22);
             this.dateTxt.TabIndex = 17;
-            this.dateTxt.Text = "label3";
+            this.dateTxt.Text = "No Data";
             // 
             // pictureBox12
             // 
@@ -271,6 +271,31 @@
             this.panel7.Size = new System.Drawing.Size(251, 215);
             this.panel7.TabIndex = 19;
             // 
+            // medHist
+            // 
+            this.medHist.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(176)))), ((int)(((byte)(186)))));
+            this.medHist.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.medHist.Font = new System.Drawing.Font("Montserrat", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.medHist.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(249)))), ((int)(((byte)(240)))));
+            this.medHist.Location = new System.Drawing.Point(16, 36);
+            this.medHist.Multiline = true;
+            this.medHist.Name = "medHist";
+            this.medHist.ReadOnly = true;
+            this.medHist.Size = new System.Drawing.Size(155, 174);
+            this.medHist.TabIndex = 28;
+            this.medHist.Text = "No Data";
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Montserrat", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.ForeColor = System.Drawing.Color.White;
+            this.label8.Location = new System.Drawing.Point(12, 6);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(132, 21);
+            this.label8.TabIndex = 27;
+            this.label8.Text = "Medical History";
+            // 
             // panel9
             // 
             this.panel9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(176)))), ((int)(((byte)(186)))));
@@ -281,6 +306,17 @@
             this.panel9.Name = "panel9";
             this.panel9.Size = new System.Drawing.Size(251, 100);
             this.panel9.TabIndex = 16;
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Montserrat", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.ForeColor = System.Drawing.Color.White;
+            this.label10.Location = new System.Drawing.Point(13, 2);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(124, 21);
+            this.label10.TabIndex = 29;
+            this.label10.Text = "Last Visit Date";
             // 
             // panel5
             // 
@@ -293,6 +329,17 @@
             this.panel5.Size = new System.Drawing.Size(251, 100);
             this.panel5.TabIndex = 14;
             // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Montserrat", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.ForeColor = System.Drawing.Color.White;
+            this.label7.Location = new System.Drawing.Point(13, 6);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(65, 21);
+            this.label7.TabIndex = 26;
+            this.label7.Text = "Allergy";
+            // 
             // panel4
             // 
             this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(176)))), ((int)(((byte)(186)))));
@@ -303,6 +350,31 @@
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(251, 100);
             this.panel4.TabIndex = 15;
+            // 
+            // treatmentTxt
+            // 
+            this.treatmentTxt.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(176)))), ((int)(((byte)(186)))));
+            this.treatmentTxt.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.treatmentTxt.Font = new System.Drawing.Font("Montserrat", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.treatmentTxt.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(249)))), ((int)(((byte)(240)))));
+            this.treatmentTxt.Location = new System.Drawing.Point(24, 30);
+            this.treatmentTxt.Multiline = true;
+            this.treatmentTxt.Name = "treatmentTxt";
+            this.treatmentTxt.ReadOnly = true;
+            this.treatmentTxt.Size = new System.Drawing.Size(147, 67);
+            this.treatmentTxt.TabIndex = 26;
+            this.treatmentTxt.Text = "No Data";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Montserrat", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.ForeColor = System.Drawing.Color.White;
+            this.label6.Location = new System.Drawing.Point(12, 6);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(92, 21);
+            this.label6.TabIndex = 25;
+            this.label6.Text = "Treatment";
             // 
             // pictureBox15
             // 
@@ -325,6 +397,31 @@
             this.panel8.Size = new System.Drawing.Size(251, 215);
             this.panel8.TabIndex = 18;
             // 
+            // famHist
+            // 
+            this.famHist.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(176)))), ((int)(((byte)(186)))));
+            this.famHist.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.famHist.Font = new System.Drawing.Font("Montserrat", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.famHist.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(249)))), ((int)(((byte)(240)))));
+            this.famHist.Location = new System.Drawing.Point(11, 30);
+            this.famHist.Multiline = true;
+            this.famHist.Name = "famHist";
+            this.famHist.ReadOnly = true;
+            this.famHist.Size = new System.Drawing.Size(161, 177);
+            this.famHist.TabIndex = 22;
+            this.famHist.Text = "No Data";
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Montserrat", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.ForeColor = System.Drawing.Color.White;
+            this.label9.Location = new System.Drawing.Point(7, 6);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(125, 21);
+            this.label9.TabIndex = 28;
+            this.label9.Text = "Family History";
+            // 
             // pictureBox5
             // 
             this.pictureBox5.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox5.Image")));
@@ -346,6 +443,17 @@
             this.panel6.Size = new System.Drawing.Size(251, 100);
             this.panel6.TabIndex = 13;
             // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Montserrat", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.Color.White;
+            this.label4.Location = new System.Drawing.Point(13, 6);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(87, 21);
+            this.label4.TabIndex = 22;
+            this.label4.Text = "Diagnosis";
+            // 
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(176)))), ((int)(((byte)(186)))));
@@ -357,6 +465,17 @@
             this.panel2.Size = new System.Drawing.Size(251, 100);
             this.panel2.TabIndex = 11;
             // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Montserrat", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.White;
+            this.label2.Location = new System.Drawing.Point(12, 5);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(106, 21);
+            this.label2.TabIndex = 21;
+            this.label2.Text = "Hospital No.";
+            // 
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(176)))), ((int)(((byte)(186)))));
@@ -367,6 +486,17 @@
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(251, 100);
             this.panel3.TabIndex = 12;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Montserrat", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.White;
+            this.label3.Location = new System.Drawing.Point(3, 5);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(87, 21);
+            this.label3.TabIndex = 24;
+            this.label3.Text = "Room No.";
             // 
             // panel1
             // 
@@ -390,17 +520,16 @@
             this.panel10.Size = new System.Drawing.Size(251, 100);
             this.panel10.TabIndex = 17;
             // 
-            // patientIDTxt
+            // medTxt
             // 
-            this.patientIDTxt.AutoSize = true;
-            this.patientIDTxt.Font = new System.Drawing.Font("Montserrat", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.patientIDTxt.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(176)))), ((int)(((byte)(186)))));
-            this.patientIDTxt.Location = new System.Drawing.Point(838, 41);
-            this.patientIDTxt.Name = "patientIDTxt";
-            this.patientIDTxt.Size = new System.Drawing.Size(89, 21);
-            this.patientIDTxt.TabIndex = 20;
-            this.patientIDTxt.Text = "Patient ID";
-            this.patientIDTxt.Click += new System.EventHandler(this.label1_Click);
+            this.medTxt.AutoSize = true;
+            this.medTxt.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.medTxt.ForeColor = System.Drawing.Color.White;
+            this.medTxt.Location = new System.Drawing.Point(28, 30);
+            this.medTxt.Name = "medTxt";
+            this.medTxt.Size = new System.Drawing.Size(78, 22);
+            this.medTxt.TabIndex = 24;
+            this.medTxt.Text = "No Data";
             // 
             // label5
             // 
@@ -413,146 +542,17 @@
             this.label5.TabIndex = 23;
             this.label5.Text = "Medication";
             // 
-            // label3
+            // patientIDTxt
             // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Montserrat", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(3, 5);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(87, 21);
-            this.label3.TabIndex = 24;
-            this.label3.Text = "Room No.";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Montserrat", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(12, 5);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(106, 21);
-            this.label2.TabIndex = 21;
-            this.label2.Text = "Hospital No.";
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Montserrat", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.ForeColor = System.Drawing.Color.White;
-            this.label9.Location = new System.Drawing.Point(7, 6);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(125, 21);
-            this.label9.TabIndex = 28;
-            this.label9.Text = "Family History";
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Montserrat", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.ForeColor = System.Drawing.Color.White;
-            this.label8.Location = new System.Drawing.Point(12, 6);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(132, 21);
-            this.label8.TabIndex = 27;
-            this.label8.Text = "Medical History";
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Montserrat", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.ForeColor = System.Drawing.Color.White;
-            this.label6.Location = new System.Drawing.Point(12, 6);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(92, 21);
-            this.label6.TabIndex = 25;
-            this.label6.Text = "Treatment";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Montserrat", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(13, 6);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(87, 21);
-            this.label4.TabIndex = 22;
-            this.label4.Text = "Diagnosis";
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Montserrat", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.ForeColor = System.Drawing.Color.White;
-            this.label7.Location = new System.Drawing.Point(13, 6);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(65, 21);
-            this.label7.TabIndex = 26;
-            this.label7.Text = "Allergy";
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Montserrat", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.ForeColor = System.Drawing.Color.White;
-            this.label10.Location = new System.Drawing.Point(13, 2);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(124, 21);
-            this.label10.TabIndex = 29;
-            this.label10.Text = "Last Visit Date";
-            // 
-            // treatmentTxt
-            // 
-            this.treatmentTxt.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(176)))), ((int)(((byte)(186)))));
-            this.treatmentTxt.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.treatmentTxt.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.treatmentTxt.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(249)))), ((int)(((byte)(240)))));
-            this.treatmentTxt.Location = new System.Drawing.Point(24, 30);
-            this.treatmentTxt.Multiline = true;
-            this.treatmentTxt.Name = "treatmentTxt";
-            this.treatmentTxt.ReadOnly = true;
-            this.treatmentTxt.Size = new System.Drawing.Size(147, 67);
-            this.treatmentTxt.TabIndex = 26;
-            this.treatmentTxt.Text = "No Data";
-            // 
-            // medHist
-            // 
-            this.medHist.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(176)))), ((int)(((byte)(186)))));
-            this.medHist.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.medHist.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.medHist.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(249)))), ((int)(((byte)(240)))));
-            this.medHist.Location = new System.Drawing.Point(16, 36);
-            this.medHist.Multiline = true;
-            this.medHist.Name = "medHist";
-            this.medHist.ReadOnly = true;
-            this.medHist.Size = new System.Drawing.Size(155, 174);
-            this.medHist.TabIndex = 28;
-            this.medHist.Text = "No Data";
-            // 
-            // famHist
-            // 
-            this.famHist.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(176)))), ((int)(((byte)(186)))));
-            this.famHist.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.famHist.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.famHist.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(249)))), ((int)(((byte)(240)))));
-            this.famHist.Location = new System.Drawing.Point(11, 30);
-            this.famHist.Multiline = true;
-            this.famHist.Name = "famHist";
-            this.famHist.ReadOnly = true;
-            this.famHist.Size = new System.Drawing.Size(161, 177);
-            this.famHist.TabIndex = 22;
-            this.famHist.Text = "No Data";
-            // 
-            // medTxt
-            // 
-            this.medTxt.AutoSize = true;
-            this.medTxt.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.medTxt.ForeColor = System.Drawing.Color.White;
-            this.medTxt.Location = new System.Drawing.Point(28, 30);
-            this.medTxt.Name = "medTxt";
-            this.medTxt.Size = new System.Drawing.Size(78, 22);
-            this.medTxt.TabIndex = 24;
-            this.medTxt.Text = "No Data";
+            this.patientIDTxt.AutoSize = true;
+            this.patientIDTxt.Font = new System.Drawing.Font("Montserrat", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.patientIDTxt.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(176)))), ((int)(((byte)(186)))));
+            this.patientIDTxt.Location = new System.Drawing.Point(838, 41);
+            this.patientIDTxt.Name = "patientIDTxt";
+            this.patientIDTxt.Size = new System.Drawing.Size(89, 21);
+            this.patientIDTxt.TabIndex = 20;
+            this.patientIDTxt.Text = "Patient ID";
+            this.patientIDTxt.Click += new System.EventHandler(this.label1_Click);
             // 
             // indivPatientInfo
             // 
