@@ -48,7 +48,7 @@
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.Color.SandyBrown;
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(176)))), ((int)(((byte)(186)))));
             this.panel1.Location = new System.Drawing.Point(218, 0);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1058, 10);

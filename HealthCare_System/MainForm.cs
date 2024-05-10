@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Diagnostics;
 using System.Drawing;
 using System.Windows.Forms;
 
@@ -43,8 +44,11 @@ namespace HealthCare_System
             {
                 // Unsubscribe from the FormClosing event to prevent multiple dialogs
                 this.FormClosing -= MainForm_FormClosing;
+                Environment.Exit(0);
 
-                Application.Exit(); // Close the entire application
+                // Break into the debugger (optional)
+                Debugger.Break();
+                //Application.Exit(); // Close the entire application
             }
 
 
