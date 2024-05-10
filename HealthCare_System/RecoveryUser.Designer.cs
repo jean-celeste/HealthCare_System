@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(RecoveryUser));
             this.panel3 = new System.Windows.Forms.Panel();
             this.newPasswordTextBox = new System.Windows.Forms.TextBox();
             this.panel1 = new System.Windows.Forms.Panel();
@@ -115,7 +116,7 @@
             this.label1.Text = "New Password:";
             this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
-            // Recovery
+            // RecoveryUser
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -128,9 +129,10 @@
             this.Controls.Add(this.confirmPassword);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.newPasswordTextBox);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "RecoveryUser";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
-            this.Text = "RecoveryUser";
+            this.Text = "User Recovery";
             this.ResumeLayout(false);
             this.PerformLayout();
 

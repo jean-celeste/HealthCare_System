@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UpdateHealthInfo));
             this.hn = new System.Windows.Forms.TextBox();
             this.rn = new System.Windows.Forms.TextBox();
             this.diag = new System.Windows.Forms.TextBox();
@@ -261,8 +262,9 @@
             this.Controls.Add(this.diag);
             this.Controls.Add(this.rn);
             this.Controls.Add(this.hn);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "UpdateHealthInfo";
-            this.Text = "UpdateHealthInfo";
+            this.Text = "Update Health Information";
             this.ResumeLayout(false);
             this.PerformLayout();
 

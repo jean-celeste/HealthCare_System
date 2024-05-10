@@ -44,6 +44,12 @@
             this.emailLabel = new System.Windows.Forms.Label();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.signUpPanel = new System.Windows.Forms.Panel();
+            this.confirmPass = new HealthCare_System.customTextBox();
+            this.password = new HealthCare_System.customTextBox();
+            this.email = new HealthCare_System.customTextBox();
+            this.username = new HealthCare_System.customTextBox();
+            this.LastName = new HealthCare_System.customTextBox();
+            this.FirstName = new HealthCare_System.customTextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.button3 = new System.Windows.Forms.Button();
             this.textBox7 = new System.Windows.Forms.TextBox();
@@ -68,12 +74,6 @@
             this.textBox8 = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
-            this.confirmPass = new HealthCare_System.customTextBox();
-            this.password = new HealthCare_System.customTextBox();
-            this.email = new HealthCare_System.customTextBox();
-            this.username = new HealthCare_System.customTextBox();
-            this.LastName = new HealthCare_System.customTextBox();
-            this.FirstName = new HealthCare_System.customTextBox();
             this.loginPanel.SuspendLayout();
             this.signUpPanel.SuspendLayout();
             this.AccountRecovery.SuspendLayout();
@@ -264,6 +264,74 @@
             this.signUpPanel.Size = new System.Drawing.Size(423, 449);
             this.signUpPanel.TabIndex = 3;
             this.signUpPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint_1);
+            // 
+            // confirmPass
+            // 
+            this.confirmPass.BackColor = System.Drawing.Color.White;
+            this.confirmPass.customText = "Confirm Password";
+            this.confirmPass.Location = new System.Drawing.Point(67, 297);
+            this.confirmPass.Name = "confirmPass";
+            this.confirmPass.password = true;
+            this.confirmPass.Size = new System.Drawing.Size(296, 48);
+            this.confirmPass.TabIndex = 23;
+            this.confirmPass.TextValue = "";
+            this.confirmPass.Load += new System.EventHandler(this.confirmPass_Load);
+            // 
+            // password
+            // 
+            this.password.BackColor = System.Drawing.Color.White;
+            this.password.customText = "Password";
+            this.password.Location = new System.Drawing.Point(67, 239);
+            this.password.Name = "password";
+            this.password.password = true;
+            this.password.Size = new System.Drawing.Size(296, 48);
+            this.password.TabIndex = 22;
+            this.password.TextValue = "";
+            // 
+            // email
+            // 
+            this.email.BackColor = System.Drawing.Color.White;
+            this.email.customText = "Email";
+            this.email.Location = new System.Drawing.Point(67, 181);
+            this.email.Name = "email";
+            this.email.password = false;
+            this.email.Size = new System.Drawing.Size(296, 48);
+            this.email.TabIndex = 21;
+            this.email.TextValue = "";
+            // 
+            // username
+            // 
+            this.username.BackColor = System.Drawing.Color.White;
+            this.username.customText = "Username";
+            this.username.Location = new System.Drawing.Point(67, 124);
+            this.username.Name = "username";
+            this.username.password = false;
+            this.username.Size = new System.Drawing.Size(296, 48);
+            this.username.TabIndex = 20;
+            this.username.TextValue = "";
+            // 
+            // LastName
+            // 
+            this.LastName.BackColor = System.Drawing.Color.White;
+            this.LastName.customText = "Last Name";
+            this.LastName.Location = new System.Drawing.Point(220, 66);
+            this.LastName.Name = "LastName";
+            this.LastName.password = false;
+            this.LastName.Size = new System.Drawing.Size(143, 48);
+            this.LastName.TabIndex = 19;
+            this.LastName.TextValue = "";
+            // 
+            // FirstName
+            // 
+            this.FirstName.BackColor = System.Drawing.Color.White;
+            this.FirstName.customText = "First Name";
+            this.FirstName.Location = new System.Drawing.Point(67, 66);
+            this.FirstName.Name = "FirstName";
+            this.FirstName.password = false;
+            this.FirstName.Size = new System.Drawing.Size(143, 48);
+            this.FirstName.TabIndex = 18;
+            this.FirstName.TextValue = "";
+            this.FirstName.Load += new System.EventHandler(this.customTextBox1_Load);
             // 
             // label4
             // 
@@ -545,74 +613,6 @@
             this.label8.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             this.label8.Click += new System.EventHandler(this.label8_Click);
             // 
-            // confirmPass
-            // 
-            this.confirmPass.BackColor = System.Drawing.Color.White;
-            this.confirmPass.customText = "Confirm Password";
-            this.confirmPass.Location = new System.Drawing.Point(67, 297);
-            this.confirmPass.Name = "confirmPass";
-            this.confirmPass.password = true;
-            this.confirmPass.Size = new System.Drawing.Size(296, 48);
-            this.confirmPass.TabIndex = 23;
-            this.confirmPass.TextValue = "";
-            this.confirmPass.Load += new System.EventHandler(this.confirmPass_Load);
-            // 
-            // password
-            // 
-            this.password.BackColor = System.Drawing.Color.White;
-            this.password.customText = "Password";
-            this.password.Location = new System.Drawing.Point(67, 239);
-            this.password.Name = "password";
-            this.password.password = true;
-            this.password.Size = new System.Drawing.Size(296, 48);
-            this.password.TabIndex = 22;
-            this.password.TextValue = "";
-            // 
-            // email
-            // 
-            this.email.BackColor = System.Drawing.Color.White;
-            this.email.customText = "Email";
-            this.email.Location = new System.Drawing.Point(67, 181);
-            this.email.Name = "email";
-            this.email.password = false;
-            this.email.Size = new System.Drawing.Size(296, 48);
-            this.email.TabIndex = 21;
-            this.email.TextValue = "";
-            // 
-            // username
-            // 
-            this.username.BackColor = System.Drawing.Color.White;
-            this.username.customText = "Username";
-            this.username.Location = new System.Drawing.Point(67, 124);
-            this.username.Name = "username";
-            this.username.password = false;
-            this.username.Size = new System.Drawing.Size(296, 48);
-            this.username.TabIndex = 20;
-            this.username.TextValue = "";
-            // 
-            // LastName
-            // 
-            this.LastName.BackColor = System.Drawing.Color.White;
-            this.LastName.customText = "Last Name";
-            this.LastName.Location = new System.Drawing.Point(220, 66);
-            this.LastName.Name = "LastName";
-            this.LastName.password = false;
-            this.LastName.Size = new System.Drawing.Size(143, 48);
-            this.LastName.TabIndex = 19;
-            this.LastName.TextValue = "";
-            // 
-            // FirstName
-            // 
-            this.FirstName.BackColor = System.Drawing.Color.White;
-            this.FirstName.customText = "First Name";
-            this.FirstName.Location = new System.Drawing.Point(67, 66);
-            this.FirstName.Name = "FirstName";
-            this.FirstName.password = false;
-            this.FirstName.Size = new System.Drawing.Size(143, 48);
-            this.FirstName.TabIndex = 18;
-            this.FirstName.TextValue = "";
-            this.FirstName.Load += new System.EventHandler(this.customTextBox1_Load);
-            // 
             // LoginSignupForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -628,7 +628,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "LoginSignupForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Library Management System";
+            this.Text = "iCare Admin Login/Signup";
             this.Load += new System.EventHandler(this.LoginSignupForm_Load);
             this.loginPanel.ResumeLayout(false);
             this.loginPanel.PerformLayout();

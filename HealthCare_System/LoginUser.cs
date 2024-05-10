@@ -361,7 +361,8 @@ namespace HealthCare_System
             }
             else
             {
-                e.Cancel = false; // Allow the form to close
+                UserAdmin_Prompt prompt = new UserAdmin_Prompt();
+                prompt.Show();
             }
         }
 
